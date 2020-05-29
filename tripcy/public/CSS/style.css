@@ -1,0 +1,2768 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Root";
+  src: url(../Fonts/RootLight.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Root";
+  src: url(../Fonts/RootBold.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Ed";
+  src: url(../Fonts/Edo_SZ.ttf);
+  font-weight: 300;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #120A43;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-family: "Century Gothic";
+  font-size: 3vw;
+  color: #fff;
+  margin-bottom: 4vw;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 98vh;
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  height: 100%;
+}
+
+.content header {
+  width: 85vw;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content header .logo {
+  display: block;
+  width: 5vw;
+  height: 5vw;
+  background: url(../Images/logo.png);
+  background-size: cover;
+  margin-top: 0.5vw;
+}
+
+.content header .headerLinks {
+  width: 18vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content header .headerLinks a {
+  color: #fff;
+  font-size: 1.4vw;
+  font-family: "Root";
+  font-weight: 300;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.content header .headerLinks a:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 0.7;
+}
+
+.content header .headerLinks .active {
+  color: #D41BB3;
+  font-weight: 400;
+}
+
+.content header .searchBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 28vw;
+  background: #1C1259;
+  height: 0.7vw;
+  padding: 1vw;
+  border-radius: 2vw;
+}
+
+.content header .searchBlock i {
+  color: #B0B7D1;
+  font-size: 1.4vw;
+  margin-right: 1vw;
+}
+
+.content header .searchBlock input {
+  background: none;
+  border: 0;
+  color: #B0B7D1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1vw;
+  width: 100%;
+  height: 2vw;
+  outline: none;
+}
+
+.content header .searchBlock input::-webkit-input-placeholder {
+  color: #646464;
+  font-style: italic;
+}
+
+.content header .searchBlock input:-ms-input-placeholder {
+  color: #646464;
+  font-style: italic;
+}
+
+.content header .searchBlock input::-ms-input-placeholder {
+  color: #646464;
+  font-style: italic;
+}
+
+.content header .searchBlock input::placeholder {
+  color: #646464;
+  font-style: italic;
+}
+
+.content header .authorizationBlock {
+  width: 18vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content header .authorizationBlock .profileLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content header .authorizationBlock .profileLink img {
+  width: 2vw;
+  height: 2vw;
+  margin-right: 1vw;
+}
+
+.content header .authorizationBlock .profileLink:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  cursor: pointer;
+}
+
+.content header .authorizationBlock a {
+  color: #fff;
+  font-size: 1.4vw;
+  font-family: "Root";
+  font-weight: 300;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.content header .authorizationBlock a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.content header .authorizationBlock .active {
+  color: #D41BB3;
+  font-weight: 400;
+}
+
+.content header .authorizationBlock .active:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.content header .authorizationBlock p {
+  color: #fff;
+  font-size: 1.5vw;
+}
+
+.content main {
+  margin-top: 8vw;
+}
+
+.content main .previewMain {
+  width: 85vw;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.content main .previewMain a {
+  display: block;
+  width: 40vw;
+  height: 27vw;
+  background: url(../Images/map.jpg);
+  background-size: cover;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.content main .previewMain a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.content main .previewMain div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content main .previewMain div h1 {
+  font-family: "Ed";
+  font-size: 10vw;
+  color: #fff;
+  font-weight: 250;
+  margin-bottom: 1vw;
+  margin-top: -2vw;
+}
+
+.content main .previewMain div h3 {
+  font-family: "Century Gothic";
+  color: #fff;
+  font-size: 3.5vw;
+  font-weight: 300;
+}
+
+.content main .interactiveMap {
+  margin: 0 auto;
+}
+
+.content main .interactiveMap h2 {
+  font-family: "Century Gothic";
+  font-size: 4vw;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1.5vw;
+}
+
+.content main .interactiveMap p {
+  font-family: "Century Gothic";
+  font-weight: 300;
+  font-size: 1.7vw;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1.5vw;
+}
+
+.content main .interactiveMap .mapBlock {
+  width: 85vw;
+  margin: 0 auto;
+  position: relative;
+}
+
+.content main .interactiveMap .mapBlock img {
+  width: 85vw;
+  height: 40vw;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.content main .interactiveMap .mapBlock i {
+  color: #3E3286;
+  position: absolute;
+  font-size: 5vw;
+  z-index: 2;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.content main .interactiveMap .mapBlock i:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.content main .interactiveMap .mapBlock #regKha {
+  top: 2vw;
+  right: 35vw;
+}
+
+.content main .interactiveMap .mapBlock #withoutKha {
+  top: 2vw;
+  right: 65vw;
+}
+
+.content main .interactiveMap .mapBlock #historyKha {
+  top: 30vw;
+  right: 67vw;
+}
+
+.content main .interactiveMap .mapBlock #crazyHouse {
+  top: 25vw;
+  right: 12vw;
+}
+
+.content main .interactiveMap .mapBlock #univerKha {
+  top: 8vw;
+  right: 74vw;
+}
+
+.content main .excursionsMain {
+  width: 85vw;
+  margin: 0 auto;
+  margin-top: 10vw;
+}
+
+.content main .excursionsMain h2 {
+  font-family: "Century Gothic";
+  font-size: 2.5vw;
+  color: #fff;
+  text-align: center;
+}
+
+.content main .excursionsMain .firstExLine {
+  margin-top: 2vw;
+  width: 85vw;
+  height: 25vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content main .excursionsMain .firstExLine .exPreview {
+  width: 42vw;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-family: "Century Gothic";
+  font-weight: 600;
+  font-size: 2.5vw;
+}
+
+.content main .excursionsMain .firstExLine .exPreview:nth-child(1) {
+  background: url(../Images/tours/chirch.jpg);
+  background-size: cover;
+}
+
+.content main .excursionsMain .firstExLine .exPreview:nth-child(2) {
+  background: url(../Images/tours/gosprom.jpg);
+  background-size: cover;
+}
+
+.content main .excursionsMain .secondExLine {
+  margin-top: 1vw;
+  width: 85vw;
+  height: 22vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content main .excursionsMain .secondExLine .exPreview {
+  width: 27.7vw;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-family: "Century Gothic";
+  font-weight: 600;
+  font-size: 2.5vw;
+}
+
+.content main .excursionsMain .secondExLine .exPreview:nth-child(1) {
+  background: url(../Images/tours/castle.jpg);
+  background-size: cover;
+}
+
+.content main .excursionsMain .secondExLine .exPreview:nth-child(2) {
+  background: url(../Images/tours/mental_hosp.jpg);
+  background-size: cover;
+}
+
+.content main .excursionsMain .secondExLine .exPreview:nth-child(3) {
+  background: url(../Images/tours/karasin.jpg);
+  background-size: cover;
+}
+
+.content main .advantagesBlock {
+  width: 85vw;
+  margin: 0 auto;
+  margin-top: 5vw;
+  padding-bottom: 30px;
+}
+
+.content main .advantagesBlock h2 {
+  font-family: "Century Gothic";
+  font-size: 2.5vw;
+  color: #fff;
+  text-align: center;
+}
+
+.content main .advantagesBlock .advantagesfirstline {
+  margin: 0 auto;
+  margin-top: 3vw;
+  width: 85vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.content main .advantagesBlock .advantagesfirstline .advantageBlock {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content main .advantagesBlock .advantagesfirstline .advantageBlock p {
+  font-family: "Century Gothic";
+  color: #fff;
+  text-align: center;
+  padding: 15px 0 15px 0;
+}
+
+.content main .advantagesBlock .advantagesfirstline .advantageBlock .circleBlock {
+  width: 14vw;
+  height: 14vw;
+  background-color: #3E3286;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.content main .advantagesBlock .advantagesfirstline .advantageBlock .circleBlock h1 {
+  font-family: "Century Gothic";
+  font-weight: 600;
+  font-size: 8vw;
+  color: #fff;
+  text-shadow: 6px 3px 0 #646464;
+}
+
+.content main .advantagesBlock .advantagesfirstline .advantageBlock p {
+  text-align: center;
+  max-width: 14vw;
+}
+
+.content main .advantagesBlock .advantagesSecondLine {
+  margin: 0 auto;
+  width: 50vw;
+  height: 25vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.content main .advantagesBlock .advantagesSecondLine .advantageBlock {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content main .advantagesBlock .advantagesSecondLine .advantageBlock p {
+  font-family: "Century Gothic";
+  color: #fff;
+  max-width: 14vw;
+  text-align: center;
+  padding: 15px 0 15px 0;
+}
+
+.content main .advantagesBlock .advantagesSecondLine .advantageBlock .circleBlock {
+  width: 14vw;
+  height: 14vw;
+  background-color: #3E3286;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.content main .advantagesBlock .advantagesSecondLine .advantageBlock .circleBlock h1 {
+  font-family: "Century Gothic";
+  font-weight: 600;
+  font-size: 8vw;
+  color: #fff;
+  text-shadow: 6px 3px 0 #646464;
+}
+
+.content main .questionsBlock {
+  width: 100%;
+  background: url(../Images/wall.jpg);
+  background-size: cover;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+}
+
+.content main .questionsBlock .formQuestion {
+  margin-top: 0;
+  width: 35vw;
+  background: rgba(62, 50, 134, 0.5);
+  border-radius: 2vw;
+  margin: 0 auto;
+}
+
+.content main .questionsBlock .formQuestion form {
+  margin: 0 auto;
+  width: 27vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content main .questionsBlock .formQuestion form h1 {
+  color: #fff;
+  font-family: "Century Gothic";
+  font-weight: 600;
+  font-size: 3vw;
+  text-align: center;
+  padding-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+.content main .questionsBlock .formQuestion form input {
+  border-radius: 5vw;
+  margin-bottom: 2.5vw;
+  border: 0;
+  background-color: #120A43;
+  width: 27vw;
+  height: 1vw;
+  padding: 1vw;
+  color: #fff;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1vw;
+}
+
+.content main .questionsBlock .formQuestion form input::-webkit-input-placeholder {
+  color: #646464;
+  font-style: italic;
+}
+
+.content main .questionsBlock .formQuestion form input:-ms-input-placeholder {
+  color: #646464;
+  font-style: italic;
+}
+
+.content main .questionsBlock .formQuestion form input::-ms-input-placeholder {
+  color: #646464;
+  font-style: italic;
+}
+
+.content main .questionsBlock .formQuestion form input::placeholder {
+  color: #646464;
+  font-style: italic;
+}
+
+.content main .questionsBlock .formQuestion form textarea {
+  background-color: #120A43;
+  border: 0;
+  width: 27vw;
+  min-height: 10vw;
+  border-radius: 2vw;
+  resize: none;
+  padding: 1vw;
+  color: #fff;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1vw;
+  margin-bottom: 3vw;
+}
+
+.content main .questionsBlock .formQuestion form textarea::-webkit-input-placeholder {
+  color: #646464;
+  font-style: italic;
+}
+
+.content main .questionsBlock .formQuestion form textarea:-ms-input-placeholder {
+  color: #646464;
+  font-style: italic;
+}
+
+.content main .questionsBlock .formQuestion form textarea::-ms-input-placeholder {
+  color: #646464;
+  font-style: italic;
+}
+
+.content main .questionsBlock .formQuestion form textarea::placeholder {
+  color: #646464;
+  font-style: italic;
+}
+
+.content main .questionsBlock .formQuestion form button {
+  width: 10vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3vw;
+  padding: 1vw;
+  border: 0;
+  border-radius: 1vw;
+  background: #88D498;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  outline: none;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  margin-bottom: 5vw;
+}
+
+.content main .questionsBlock .formQuestion form button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+.guidesPageBlock {
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.guidesPageBlock .guideBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10vw;
+}
+
+.guidesPageBlock .guideBox img {
+  width: 25vw;
+
+}
+
+.guidesPageBlock .guideBox .guideContent {
+  width: 45vw;
+}
+
+.guidesPageBlock .guideBox .guideContent h3 {
+  font-family: "Century Gothic";
+  font-size: 2.5vw;
+  color: #fff;
+  margin-bottom: 1vw;
+}
+
+.guidesPageBlock .guideBox .guideContent p {
+  font-family: "Century Gothic";
+  font-size: 1.7vw;
+  color: #fff;
+  margin-bottom: 1vw;
+}
+
+.guidesPageBlock .guideBox .guideContent .guideRate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 35vw;
+}
+
+.guidesPageBlock .guideBox .guideContent .guideRate h4 {
+  font-family: "Century Gothic";
+  font-size: 2vw;
+  font-weight: 600;
+  color: #fff;
+}
+
+.guidesPageBlock .guideBox .guideContent .guideRate .starsBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.guidesPageBlock .guideBox .guideContent .guideRate .starsBlock label {
+  -webkit-transition: 400ms -webkit-transform;
+  transition: 400ms -webkit-transform;
+  transition: 400ms transform;
+  transition: 400ms transform, 400ms -webkit-transform;
+}
+
+.guidesPageBlock .guideBox .guideContent .guideRate .starsBlock label:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.guidesPageBlock .guideBox .guideContent .guideRate .starsBlock label:hover i {
+  color: #D41BB3;
+}
+
+.guidesPageBlock .guideBox .guideContent .guideRate .starsBlock label:hover ~ label {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.guidesPageBlock .guideBox .guideContent .guideRate .starsBlock label:hover ~ label i {
+  color: #D41BB3;
+}
+
+.guidesPageBlock .guideBox .guideContent .guideRate .starsBlock label i {
+  font-size: 3vw;
+  color: #B0B7D1;
+  margin-left: 0.3vw;
+}
+
+.guidesPageBlock .guideBox .guideContent .guideRate .starsBlock input {
+  display: none;
+}
+
+.guidesPageBlock .guideBox .guideContent .guideRate .starsBlock input:checked ~ label i {
+  color: #D41BB3;
+}
+
+.guidesPageBlock .guideBox:nth-of-type(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.tourBlock {
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.tourBlock .sightsMarks {
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -2vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 4vw;
+}
+
+.tourBlock .sightsMarks a {
+  font-family: "Century Gothic";
+  font-size: 1.3vw;
+  line-height: 1.5vw;
+  vertical-align: center;
+  padding: 0.5vw 1vw 0.5vw 1vw;
+  background: #493d91;
+  color: #B0B7D1;
+  border-radius: 0.5vw;
+}
+
+.tourBlock .tourInfo {
+  margin-bottom: 4vw;
+}
+
+.tourBlock .tourInfo ul {
+  margin-left: 1vw;
+}
+
+.tourBlock .tourInfo ul li {
+  font-family: "Century Gothic";
+  font-size: 1.6vw;
+  color: #fff;
+  margin-bottom: 1vw;
+}
+
+.tourBlock .tourInfo ul li span {
+  font-weight: 600;
+}
+
+.tourBlock .photoSphereBlock {
+  background: url(../Images/oval.png);
+  background-size: 100% 100%;
+  background-position-y: -1vw;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.tourBlock .photoSphereBlock .iframeWrap {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  width: 60vw;
+  margin: 0 auto;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+.tourBlock .photoSphereBlock .iframeWrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  border: 0;
+}
+
+.descriptionTour {
+  width: 60vw;
+  font-size: 1.8vw;
+  font-family: "Century Gothic";
+  color: #fff;
+  margin: 0 auto;
+  margin-bottom: 4vw;
+}
+
+.toRecordBlock {
+  width: 53vw;
+  margin: 0 auto;
+  background: #5E53A1;
+  border-radius: 1vw;
+  padding: 2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 7vw;
+}
+
+.toRecordBlock h3 {
+  color: #fff;
+  font-family: "Century Gothic";
+  font-size: 2.2vw;
+  font-weight: 600;
+  margin-bottom: 1vw;
+}
+
+.toRecordBlock p {
+  font-family: "Century Gothic";
+  color: #fff;
+  font-size: 1.2vw;
+  margin-bottom: 0.5vw;
+}
+
+.toRecordBlock a {
+  padding: 1vw;
+  background: #88D498;
+  border-radius: 1vw;
+  font-size: 2.2vw;
+  font-family: "Century Gothic";
+  font-weight: 600;
+  color: #000;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.toRecordBlock a:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.sightBlock {
+  width: 85vw;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10vw;
+}
+
+.sightBlock .descriptionSight {
+  width: 40vw;
+}
+
+.sightBlock .descriptionSight h3 {
+  font-family: "Century Gothic";
+  font-size: 2vw;
+  color: #fff;
+  text-indent: 2vw;
+  margin-bottom: 1vw;
+}
+
+.sightBlock .descriptionSight p {
+  font-family: "Century Gothic";
+  font-size: 1.3vw;
+  text-indent: 2vw;
+  font-weight: 300;
+  color: #fff;
+}
+
+.sightBlock .slideShowSight {
+  width: 30vw;
+  height: 20vw;
+  background: url(../Images/oval.png);
+  background-size: 100% 100%;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sightBlock .slideShowSight .slideShowWrap {
+  width: 30vw;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sightBlock .slideShowSight .slideShowWrap .imgSight {
+  width: 20vw;
+  height: 15vw;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0 auto;
+}
+
+.sightBlock:nth-of-type(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.locationBlock {
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.locationBlock h2 {
+  text-align: center;
+}
+
+.locationBlock .sightWrap {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.locationBlock .sightWrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  border: 0;
+}
+
+.scheduleBlock {
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.scheduleBlock .filterBlock {
+  width: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 4vw;
+  margin-bottom: 3vw;
+}
+
+.scheduleBlock .filterBlock h3 {
+  font-family: "Century Gothic";
+  font-size: 1.8vw;
+  color: #fff;
+  font-weight: 600;
+}
+
+.scheduleBlock .filterBlock select {
+  width: 15vw;
+  padding: 0.5vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  background: #1C1259;
+  border: 0;
+  color: #B0B7D1;
+  font-family: "Century Gothic";
+  font-size: 1.2vw;
+  text-align: center;
+  outline: none;
+  border-radius: 2vw;
+}
+
+.scheduleBlock .filterBlock select:focus {
+  outline: none;
+}
+
+.scheduleBlock .filterBlock select option {
+  border: 0;
+  outline: none;
+}
+
+.scheduleBlock .dateBlock {
+  padding: 0.6vw;
+  padding-left: 2vw;
+  padding-right: 3vw;
+  font-family: "Century Gothic";
+  font-size: 1.4vw;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+  background: #B0B7D1;
+  border-radius: 2vw;
+  width: 20vw;
+  margin-bottom: 1vw;
+}
+
+.scheduleBlock .scheduleWrap {
+  width: 85vw;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.scheduleBlock .scheduleWrap .traceBlock {
+  position: relative;
+  width: 3vw;
+  margin-left: 1vw;
+}
+
+.scheduleBlock .scheduleWrap .traceBlock .step {
+  width: 1vw;
+  height: 2vw;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-right: 2vw;
+  margin-bottom: 0.5vw;
+}
+
+.scheduleBlock .scheduleWrap .traceBlock .step:nth-child(even) {
+  margin-left: 2vw;
+}
+
+.scheduleBlock .scheduleWrap .traceBlock .pointBlock {
+  width: 7vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.scheduleBlock .scheduleWrap .traceBlock .pointBlock .circle {
+  width: 3vw;
+  height: 3vw;
+  background: #B0B7D1;
+  border-radius: 50%;
+}
+
+.scheduleBlock .scheduleWrap .traceBlock .pointBlock p {
+  font-family: "Century Gothic";
+  color: #fff;
+  font-size: 1.4vw;
+  font-weight: 600;
+}
+
+.scheduleBlock .scheduleWrap .excursionsBlock .excursion {
+  width: 65vw;
+  background: #5E53A1;
+  padding: 2vw;
+  border-radius: 1vw;
+  margin-bottom: 4vw;
+}
+
+.scheduleBlock .scheduleWrap .excursionsBlock .excursion .mainInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.scheduleBlock .scheduleWrap .excursionsBlock .excursion .mainInfo img {
+  width: 20vw;
+  height: 20vw;
+  margin-right: 3vw;
+}
+
+.scheduleBlock .scheduleWrap .excursionsBlock .excursion .mainInfo .description h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8vw;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1vw;
+}
+
+.scheduleBlock .scheduleWrap .excursionsBlock .excursion .mainInfo .description .sightsOfEx {
+  width: 40vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.scheduleBlock .scheduleWrap .excursionsBlock .excursion .mainInfo .description .sightsOfEx h4 {
+  font-family: "Century Gothic";
+  font-size: 0.8vw;
+  line-height: 0.8vw;
+  vertical-align: center;
+  padding: 0.5vw 1vw 0.5vw 1vw;
+  background: #493d91;
+  color: #B0B7D1;
+  border-radius: 0.2vw;
+  margin-bottom: 2vw;
+}
+
+.scheduleBlock .scheduleWrap .excursionsBlock .excursion .mainInfo .description .moreInfoBlock p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vw;
+  color: #fff;
+}
+
+.scheduleBlock .scheduleWrap .excursionsBlock .excursion .mainInfo .description .moreInfoBlock p span {
+  font-weight: 600;
+  font-size: 1.2vw;
+  margin-right: 1vw;
+}
+
+.scheduleBlock .scheduleWrap .excursionsBlock .excursion .mainInfo .description .moreInfoBlock p:last-of-type {
+  margin-top: 1vw;
+  font-size: 1.4vw;
+}
+
+.scheduleBlock .scheduleWrap .excursionsBlock .excursion .mainInfo .description .moreInfoBlock p:last-of-type span {
+  font-size: 1.6vw;
+}
+
+.scheduleBlock .scheduleWrap .excursionsBlock .excursion .actionsBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1vw;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.scheduleBlock .scheduleWrap .excursionsBlock .excursion .actionsBlock a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8vw;
+  color: #000;
+  font-weight: 600;
+  background: #88D498;
+  border-radius: 1vw;
+  padding: 1.4vw 4vw 1.4vw 4vw;
+  text-align: center;
+  min-width: 20vw;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.scheduleBlock .scheduleWrap .excursionsBlock .excursion .actionsBlock a:last-of-type {
+  min-width: initial;
+  background: #fff;
+}
+
+.scheduleBlock .scheduleWrap .excursionsBlock .excursion .actionsBlock a:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.profileBlock {
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.profileBlock .bioDescBlock {
+  width: 85vw;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 8vw;
+}
+
+.profileBlock .bioDescBlock img {
+  width: 15vw;
+  height: 15vw;
+  margin-right: 5vw;
+}
+
+.profileBlock .bioDescBlock .bioInfo p {
+  font-family: "Century Gothic";
+  font-size: 2vw;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 0.7vw;
+}
+
+.profileBlock .bioDescBlock .bioInfo p span {
+  font-weight: 600;
+}
+
+.profileBlock .profileTabs {
+  width: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 10vw;
+  position: relative;
+  margin-bottom: -3vw;
+  z-index: 1;
+}
+
+.profileBlock .profileTabs a {
+  font-family: "Century Gothic";
+  font-size: 1vw;
+  color: #fff;
+  background: #3E3286;
+  padding: 0.7vw 4vw 3vw 4vw;
+  border-radius: 1vw;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.profileBlock .profileTabs a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  cursor: pointer;
+}
+
+.profileBlock .profileTabs .activeTab {
+  background: #5E53A1;
+}
+
+.profileBlock .profileInfoBlock {
+  width: 75vw;
+  background: #5E53A1;
+  padding: 5vw;
+  position: relative;
+  z-index: 2;
+  border-radius: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profileBlock .profileInfoBlock h4 {
+  font-family: "Century Gothic";
+  font-size: 3vw;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 4vw;
+}
+
+.profileBlock .profileInfoBlock .noCard {
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.profileBlock .profileInfoBlock button {
+  font-family: "Century Gothic";
+  font-size: 3vw;
+  color: #fff;
+  font-weight: 600;
+  background: #88D498;
+  border-radius: 1vw;
+  padding: 1vw 3vw 1vw 3vw;
+  border: 0;
+  margin: 0 auto;
+  margin-bottom: 3vw;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.profileBlock .profileInfoBlock button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.profileBlock .profileInfoBlock .addCard {
+  margin: 0 auto;
+  display: none;
+}
+
+.profileBlock .profileInfoBlock .addCard form {
+  width: 40vw;
+  background: #B0B7D1;
+  padding: 1vw;
+  border-radius: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profileBlock .profileInfoBlock .addCard form .requisites {
+  margin-top: 1vw;
+  width: 40vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profileBlock .profileInfoBlock .addCard form .requisites div {
+  width: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.profileBlock .profileInfoBlock .addCard form .requisites div p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1.2vw;
+}
+
+.profileBlock .profileInfoBlock .addCard form .requisites div input {
+  width: 20vw;
+  background: #1C1259;
+  border: 0;
+  font-size: 1.2vw;
+  outline: none;
+  padding: 0.7vw 1vw 0.7vw 1vw;
+  border-radius: 2vw;
+  color: #fff;
+  margin-bottom: 1vw;
+}
+
+.profileBlock .profileInfoBlock .addCard form .requisites .cardDateBlock {
+  margin-bottom: 2vw;
+  width: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.profileBlock .profileInfoBlock .addCard form .requisites .cardDateBlock div {
+  width: 14vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.profileBlock .profileInfoBlock .addCard form .requisites .cardDateBlock div p {
+  margin-right: 4vw;
+}
+
+.profileBlock .profileInfoBlock .addCard form .requisites .cardDateBlock input {
+  width: 5vw;
+}
+
+.profileBlock .profileInfoBlock .addCard form a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  background: #88D498;
+  margin-left: 18vw;
+  margin-bottom: 1vw;
+  padding: 0.5vw 2vw 0.5vw 2vw;
+  border-radius: 1vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 2vw;
+  color: #120A43;
+  -webkit-transition: 400ms -webkit-transform;
+  transition: 400ms -webkit-transform;
+  transition: 400ms transform;
+  transition: 400ms transform, 400ms -webkit-transform;
+}
+
+.profileBlock .profileInfoBlock .addCard form a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  cursor: pointer;
+}
+
+.profileBlock .profileInfoBlock .achievemntsBlock {
+  display: none;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.profileBlock .profileInfoBlock .achievemntsBlock .achievementsGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2vw;
+}
+
+.profileBlock .profileInfoBlock .achievemntsBlock .achievementsGrid .achievement {
+  width: 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profileBlock .profileInfoBlock .achievemntsBlock .achievementsGrid .achievement img {
+  width: 10vw;
+  height: 10vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50vw;
+}
+
+.profileBlock .profileInfoBlock .achievemntsBlock .achievementsGrid .achievement h4 {
+  font-size: 2vw;
+  margin-bottom: 1vw;
+}
+
+.profileBlock .profileInfoBlock .achievemntsBlock .achievementsGrid .achievement p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1vw;
+  color: #B0B7D1;
+}
+
+footer {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-top: 7vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #0B0341;
+  height: 5vw;
+}
+
+footer .footerEl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footerEl i {
+  font-size: 3vw;
+  color: #D41BB3;
+  text-shadow: 0 0 3px #D41BB3;
+  margin-right: 1vw;
+}
+
+footer .footerEl p {
+  font-size: 1.4vw;
+  font-family: Arial;
+  font-weight: 300;
+  color: #D41BB3;
+  text-shadow: 0 0 3px #D41BB3;
+}
+
+.modalAuth {
+  width: 100%;
+  height: 100%;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+}
+
+.modalAuth .registrForm {
+  width: 50vw;
+  background: #5E53A1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2vw;
+}
+
+.modalAuth .registrForm .registerBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modalAuth .registrForm .registerBox .registerLine {
+  width: 45vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modalAuth .registrForm h1 {
+  padding: 1vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5vw;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 2vw;
+}
+
+.modalAuth .registrForm p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2vw;
+  color: #fff;
+  margin-bottom: 0.5vw;
+  text-align: left;
+}
+
+.modalAuth .registrForm input {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vw;
+  background-color: #1C1259;
+  padding: 0.9vw 1vw 0.9vw 1vw;
+  width: 20vw;
+  border-radius: 2vw;
+  border: 0;
+  outline: none;
+  margin-bottom: 1vw;
+  color: #B0B7D1;
+}
+
+.modalAuth .registrForm input:last-of-type {
+  margin-bottom: 1.5vw;
+}
+
+.modalAuth .registrForm button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.5vw;
+  color: #fff;
+  background: #88D498;
+  border-radius: 1vw;
+  outline: none;
+  padding: 1vw 7vw 1vw 7vw;
+  border: 0;
+  -webkit-transition: 400ms -webkit-transform;
+  transition: 400ms -webkit-transform;
+  transition: 400ms transform;
+  transition: 400ms transform, 400ms -webkit-transform;
+  margin-bottom: 0.7vw;
+}
+
+.modalAuth .registrForm button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.modalAuth .registrForm a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vw;
+  color: #1C1259;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-bottom: 2vw;
+  -webkit-transition: 400ms font-size;
+  transition: 400ms font-size;
+}
+
+.modalAuth .registrForm a:hover {
+  cursor: pointer;
+  font-size: 1.1vw;
+}
+
+.modalAuth .registrForm .hrSimulator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modalAuth .registrForm .hrSimulator div {
+  display: block;
+  width: 23vw;
+  height: 0.2vw;
+  background: #120A43;
+}
+
+.modalAuth .registrForm .hrSimulator p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.modalAuth .registrForm h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5vw;
+  margin-bottom: 1vw;
+}
+
+.modalAuth .registrForm .GoogleSignIn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #B0B7D1;
+  text-decoration: none;
+  padding: 0.5vw 1.5vw 0.5vw 1.5vw;
+  border-radius: 2vw;
+  -webkit-transition: 400ms -webkit-transform;
+  transition: 400ms -webkit-transform;
+  transition: 400ms transform;
+  transition: 400ms transform, 400ms -webkit-transform;
+}
+
+.modalAuth .registrForm .GoogleSignIn:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.modalAuth .registrForm .GoogleSignIn img {
+  width: 2vw;
+  height: 2vw;
+  margin-right: 2vw;
+}
+
+.modalAuth .registrForm .GoogleSignIn p {
+  font-size: 1vw;
+  padding: 0;
+  margin: 0;
+}
+
+.modalAuth .authorizationForm {
+  width: 50vw;
+  background: #5E53A1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2vw;
+}
+
+.modalAuth .authorizationForm h1 {
+  padding: 1vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5vw;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+}
+
+.modalAuth .authorizationForm p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2vw;
+  color: #fff;
+  margin-bottom: 0.5vw;
+  text-align: left;
+}
+
+.modalAuth .authorizationForm input {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vw;
+  background-color: #1C1259;
+  padding: 0.9vw 1vw 0.9vw 1vw;
+  width: 20vw;
+  border-radius: 2vw;
+  border: 0;
+  outline: none;
+  margin-bottom: 1vw;
+  color: #B0B7D1;
+}
+
+.modalAuth .authorizationForm input:last-of-type {
+  margin-bottom: 1.5vw;
+}
+
+.modalAuth .authorizationForm button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.5vw;
+  color: #fff;
+  background: #88D498;
+  border-radius: 1vw;
+  outline: none;
+  padding: 1vw 7vw 1vw 7vw;
+  border: 0;
+  -webkit-transition: 400ms -webkit-transform;
+  transition: 400ms -webkit-transform;
+  transition: 400ms transform;
+  transition: 400ms transform, 400ms -webkit-transform;
+  margin-bottom: 0.7vw;
+}
+
+.modalAuth .authorizationForm button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.modalAuth .authorizationForm a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vw;
+  color: #1C1259;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-bottom: 2vw;
+  -webkit-transition: 400ms font-size;
+  transition: 400ms font-size;
+}
+
+.modalAuth .authorizationForm a:hover {
+  cursor: pointer;
+  font-size: 1.1vw;
+}
+
+.modalAuth .authorizationForm .hrSimulator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modalAuth .authorizationForm .hrSimulator div {
+  display: block;
+  width: 23vw;
+  height: 0.2vw;
+  background: #120A43;
+}
+
+.modalAuth .authorizationForm .hrSimulator p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.modalAuth .authorizationForm h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5vw;
+  margin-bottom: 1vw;
+}
+
+.modalAuth .authorizationForm .GoogleSignIn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #B0B7D1;
+  text-decoration: none;
+  padding: 0.5vw 1.5vw 0.5vw 1.5vw;
+  border-radius: 2vw;
+  -webkit-transition: 400ms -webkit-transform;
+  transition: 400ms -webkit-transform;
+  transition: 400ms transform;
+  transition: 400ms transform, 400ms -webkit-transform;
+}
+
+.modalAuth .authorizationForm .GoogleSignIn:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.modalAuth .authorizationForm .GoogleSignIn img {
+  width: 2vw;
+  height: 2vw;
+  margin-right: 2vw;
+}
+
+.modalAuth .authorizationForm .GoogleSignIn p {
+  font-size: 1vw;
+  padding: 0;
+  margin: 0;
+}
+
+.modalPay {
+  width: 100%;
+  height: 100%;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  z-index: 999;
+  top: 0;
+}
+
+.modalPay form {
+  width: 40vw;
+  padding: 1vw;
+  background: #5E53A1;
+  border-radius: 1vw;
+}
+
+.modalPay .recordToExc {
+  width: 40vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modalPay .recordToExc h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2vw;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 2vw;
+}
+
+.modalPay .recordToExc div {
+  width: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1vw;
+}
+
+.modalPay .recordToExc div p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-size: 1.2vw;
+}
+
+.modalPay .recordToExc div input {
+  padding: 0.5vw;
+  border-radius: 2vw;
+  border: 0;
+  outline: none;
+  background: #1C1259;
+  color: #B0B7D1;
+}
+
+.modalPay .recordToExc div input[readonly] {
+  background: #493D91;
+}
+
+.modalPay .recordToExc div:last-of-type {
+  margin-top: 3vw;
+}
+
+.modalPay .recordToExc div a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #120A43;
+  font-size: 2vw;
+  padding: 0.5vw 2vw 0.5vw 2vw;
+  border-radius: 1vw;
+  background: #B0B7D1;
+  -webkit-transition: 400ms -webkit-transform;
+  transition: 400ms -webkit-transform;
+  transition: 400ms transform;
+  transition: 400ms transform, 400ms -webkit-transform;
+}
+
+.modalPay .recordToExc div a:last-of-type {
+  background: #88D498;
+}
+
+.modalPay .recordToExc div a:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.modalPay .chosePayBlock {
+  width: 40vw;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modalPay .chosePayBlock h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2vw;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 2vw;
+}
+
+.modalPay .chosePayBlock div {
+  width: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1vw;
+}
+
+.modalPay .chosePayBlock div label {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-size: 2vw;
+  font-weight: 600;
+  -webkit-transition: 400ms opacity;
+  transition: 400ms opacity;
+}
+
+.modalPay .chosePayBlock div label:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.modalPay .chosePayBlock div input {
+  display: none;
+  padding: 0.5vw;
+  border-radius: 2vw;
+  border: 0;
+  outline: none;
+  background: #1C1259;
+  color: #B0B7D1;
+}
+
+.modalPay .chosePayBlock div input:checked + label {
+  color: #88D498;
+}
+
+.modalPay .chosePayBlock .cashBlock {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modalPay .chosePayBlock .cashBlock p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-size: 1.5vw;
+  margin-bottom: 4vw;
+  margin-top: 3vw;
+}
+
+.modalPay .chosePayBlock .cashBlock button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 0.5vw 2vw 0.5vw 2vw;
+  border-radius: 1vw;
+  border: 0;
+  outline: none;
+  background: #88D498;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 2vw;
+  color: #120A43;
+  -webkit-transition: 400ms -webkit-transform;
+  transition: 400ms -webkit-transform;
+  transition: 400ms transform;
+  transition: 400ms transform, 400ms -webkit-transform;
+}
+
+.modalPay .chosePayBlock .cashBlock button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.modalPay .chosePayBlock .cardBlock {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 35vw;
+}
+
+.modalPay .chosePayBlock .cardBlock div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1vw;
+  width: 35vw;
+}
+
+.modalPay .chosePayBlock .cardBlock div p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-size: 1.2vw;
+}
+
+.modalPay .chosePayBlock .cardBlock div input {
+  display: block;
+  padding: 0.5vw;
+  border-radius: 2vw;
+  border: 0;
+  outline: none;
+  background: #1C1259;
+  color: #B0B7D1;
+}
+
+.modalPay .chosePayBlock .cardBlock div:last-of-type {
+  margin-bottom: 3vw;
+}
+
+.modalPay .chosePayBlock .cardBlock button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 0.5vw 2vw 0.5vw 2vw;
+  border-radius: 1vw;
+  border: 0;
+  outline: none;
+  background: #88D498;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 2vw;
+  color: #120A43;
+  -webkit-transition: 400ms -webkit-transform;
+  transition: 400ms -webkit-transform;
+  transition: 400ms transform;
+  transition: 400ms transform, 400ms -webkit-transform;
+}
+
+.modalPay .chosePayBlock .cardBlock button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.modalPay .successRegBlock {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modalPay .successRegBlock h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2vw;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 2vw;
+}
+
+.modalPay .successRegBlock p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-size: 1.5vw;
+  margin-bottom: 4vw;
+  margin-top: 3vw;
+}
+
+.modalPay .successRegBlock button {
+  padding: 0.5vw 2vw 0.5vw 2vw;
+  border-radius: 1vw;
+  border: 0;
+  outline: none;
+  background: #88D498;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 2vw;
+  color: #120A43;
+  -webkit-transition: 400ms -webkit-transform;
+  transition: 400ms -webkit-transform;
+  transition: 400ms transform;
+  transition: 400ms transform, 400ms -webkit-transform;
+}
+
+.modalPay .successRegBlock button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.modalMarkers {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modalMarkers .marker {
+  width: 40vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #5E53A1;
+  padding: 1vw;
+  border-radius: 2vw;
+}
+
+.modalMarkers .marker .markerWrap {
+  width: 40vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modalMarkers .marker .markerWrap img {
+  width: 15vw;
+  height: 15vw;
+}
+
+.modalMarkers .marker .markerWrap .markerDesc h2 {
+  font-size: 2.5vw;
+  margin-bottom: 1vw;
+}
+
+.modalMarkers .marker .markerWrap .markerDesc div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1vw;
+}
+
+.modalMarkers .marker .markerWrap .markerDesc div p {
+  width: 8vw;
+  background: #493D91;
+  border-radius: 0.3vw;
+  padding: 0.7vw 1vw 0.7vw 1vw;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7vw;
+  color: #B0B7D1;
+}
+
+.modalMarkers .marker .markerActions {
+  margin-top: 4vw;
+  margin-bottom: 1vw;
+  width: 40vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.modalMarkers .marker .markerActions a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 2vw;
+  padding: 1.2vw;
+  border-radius: 1vw;
+  -webkit-transition: 400ms -webkit-transform;
+  transition: 400ms -webkit-transform;
+  transition: 400ms transform;
+  transition: 400ms transform, 400ms -webkit-transform;
+  color: #120A43;
+  background: #88D498;
+}
+
+.modalMarkers .marker .markerActions a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.modalMarkers .marker .markerActions a:last-of-type {
+  background: #fff;
+}
+
+.excursionInList {
+  width: 75vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.excursionInList img {
+  width: 20vw;
+  margin-right: 3vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.excursionInList h2 {
+  font-family: "Century Gothic";
+  font-size: 2vw;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 0.5vw;
+}
+
+.excursionInList .exDescInList {
+  width: 20vw;
+}
+
+.excursionInList .sightsOfEx {
+  width: 35vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.excursionInList .sightsOfEx h4 {
+  font-family: "Century Gothic";
+  font-size: 0.8vw;
+  line-height: 0.8vw;
+  vertical-align: center;
+  padding: 0.5vw 1vw 0.5vw 1vw;
+  background: #493d91;
+  color: #B0B7D1;
+  border-radius: 0.2vw;
+  margin-bottom: 2vw;
+}
+
+.excursionInList p {
+  width: 40vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2vw;
+  color: #B0B7D1;
+}
+
+.excursionInList i {
+  color: #1C1259;
+  font-size: 2vw;
+  margin-right: 2vw;
+  -webkit-transition: 400ms color, 400ms -webkit-transform;
+  transition: 400ms color, 400ms -webkit-transform;
+  transition: 400ms color, 400ms transform;
+  transition: 400ms color, 400ms transform, 400ms -webkit-transform;
+}
+
+.excursionInList i:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #88D498;
+}
+
+
+.modal {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modalEditExc form {
+  width: 50vw;
+  background: #5E53A1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2vw;
+}
+
+.modalEditExc form div {
+  width: 45vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modalEditExc form textarea {
+  width: 42vw;
+  background: #1C1259;
+  border-radius: 2vw;
+  resize: none;
+  padding: 1vw;
+  outline: none;
+  border: 0;
+  margin-bottom: 1vw;
+  color: #B0B7D1;
+}
+
+.modalEditExc form h1 {
+  padding: 1vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5vw;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+}
+
+.modalEditExc form p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2vw;
+  color: #fff;
+  margin-bottom: 0.5vw;
+  text-align: left;
+}
+
+.modalEditExc form input {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vw;
+  background-color: #1C1259;
+  padding: 0.5vw 1vw 0.5vw 1vw;
+  width: 20vw;
+  border-radius: 2vw;
+  border: 0;
+  outline: none;
+  margin-bottom: 1vw;
+  color: #B0B7D1;
+}
+
+.modalEditExc form input:last-of-type {
+  margin-bottom: 1.5vw;
+}
+
+.modalEditExc form select {
+  width: 15vw;
+  padding: 0.5vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  background: #1C1259;
+  border: 0;
+  color: #B0B7D1;
+  font-family: "Century Gothic";
+  font-size: 1vw;
+  text-align: center;
+  outline: none;
+  margin-bottom: 1vw;
+  border-radius: 2vw;
+}
+
+.modalEditExc form select:focus {
+  outline: none;
+}
+
+.modalEditExc form select option {
+  border: 0;
+  outline: none;
+}
+
+.modalEditExc button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.2vw;
+  color: #fff;
+  background: #88D498;
+  border-radius: 1vw;
+  outline: none;
+  padding: 1vw 7vw 1vw 7vw;
+  border: 0;
+  -webkit-transition: 400ms -webkit-transform;
+  transition: 400ms -webkit-transform;
+  transition: 400ms transform;
+  transition: 400ms transform, 400ms -webkit-transform;
+  margin-bottom: 0.7vw;
+}
+
+.modalEditExc button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.guidesBlock {
+  display: none;
+}
+
+.schedBlock {
+  display: none;
+}
+
+.siBlock {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .content header {
+    width: 95vw;
+  }
+  .content header .logo {
+    width: 10vw;
+    height: 10vw;
+  }
+  .content header .headerLinks {
+    width: 30vw;
+  }
+  .content header .headerLinks a {
+    font-size: 3.3vw;
+  }
+  .content header .searchBlock {
+    width: 20vw;
+    height: 3vw;
+  }
+  .content header .searchBlock input {
+    font-size: 2vw;
+  }
+  .content header .authorizationBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .content header .authorizationBlock p {
+    display: none;
+  }
+  .content header .authorizationBlock a {
+    font-size: 2vw;
+  }
+  footer {
+    height: 10vw;
+  }
+  footer a p {
+    display: none;
+  }
+  footer a i {
+    font-size: 6vw !important;
+    color: #88D498;
+  }
+  .excursionsMain {
+    padding-bottom: 5vw;
+  }
+  .advantagesBlock {
+    display: none;
+  }
+  .questionsBlock .formQuestion {
+    width: 80vw !important;
+    height: auto !important;
+  }
+  .questionsBlock .formQuestion form h1 {
+    font-size: 7vw;
+  }
+  .questionsBlock .formQuestion form input {
+    margin-top: 1vw;
+    width: 60vw !important;
+    padding: 2vw !important;
+    font-size: 2vw !important;
+  }
+  .questionsBlock .formQuestion form textarea {
+    width: 60vw !important;
+    font-size: 2vw !important;
+    height: 20vw;
+  }
+  .questionsBlock .formQuestion form button {
+    font-size: 4vw !important;
+    padding: 2vw !important;
+    width: auto !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */

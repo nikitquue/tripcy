@@ -1,0 +1,42 @@
+<form name="feedback" id="feedback">
+    <div id="formContent">    
+    <h1>З'явилися питання?</h1>
+    <input type ="text" name="username" placeholder="Ваше ім'я">
+    <input type ="text" name="mail" placeholder="Електрона пошта">
+    <textarea name="questText" placeholder="Повідомлення"></textarea>
+    <button type="submit" id="submit">Надіслати</button>
+    </div>
+
+    <div id="thanks" style="display: none; ">
+        <h1 style="margin: auto;">Дякуємо!<br> Ваш запит буде оброблено найближчим часом!<br></h1>
+    </div>
+</form>
+
+<script>
+    document.getElementById("submit").addEventListener("click", (e)=>{
+        e.preventDefault()
+        let backForm = document.forms["feedback"]
+        let userName = backForm.elements["username"].value
+        let email = backForm.elements["mail"].value
+        let message = backForm.elements["questText"].value
+
+        let feedback = JSON.stringify({name: userName, mail: email, text: message})
+        let req = new XMLHttpRequest()
+
+        req.open("POST", "/feedback",true)
+        req.setRequestHeader("Content-Type", "application/json")
+        
+
+        var thankContent = document.getElementById('thanks')
+        var formContent = document.getElementById('formContent')
+        thankContent.style.display = 'block'
+        formContent.style.display = 'none'
+        
+        setTimeout(function() {
+            thankContent.style.display = 'none'
+            formContent.style.display = 'block'
+            document.getElementById('feedback').reset()
+        }, 7000);
+        
+    })
+</script>

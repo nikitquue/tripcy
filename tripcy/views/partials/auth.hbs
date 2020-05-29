@@ -1,0 +1,75 @@
+<div class="modalAuth">
+    <form action="" class="authorizationForm" method="POST">
+        <h1>Вхід</h1>
+        <p>Електрона пошта</p>
+        <input type="email" name="checkMail" required placeholder="ivan.ivanov@gmail.com">
+        <p>Пароль</p>
+        <input type="password" name="checkPwd" required placeholder="ivanov123ivan">
+        <button type="submit">Увійти</button>
+        <a onclick="ShowModalReg()">Вперше на сайті?</a>
+        <div class="hrSimulator">
+            <div></div>
+            <p>АБО</p>
+            <div></div>
+        </div>
+        <h2>Увійти за допомогою...</h2>
+        <a class="GoogleSignIn">
+            <img src="Images/google.png" alt="">
+            <p>GOOGLE</p>
+        </a>
+    </form>
+    <form action="" class="registrForm" method="POST">
+        <h1>Реєстрація</h1>
+        <div class="registerBox">
+            <div class="registerLine">
+                <div>
+                    <p>Ім'я</p>
+                    <input type="text" name="userName" required placeholder="Іванов Іван">
+                </div>
+                <div>
+                    <p>Електрона пошта</p>
+                    <input type="text" name="userEmail" required placeholder="ivanov@gmail.com">
+                </div>
+            </div>
+            <div class="registerLine">
+                <div>
+                    <p>Пароль</p>
+                    <input type="text" name="userPwd" required placeholder="Пароль">
+                </div>
+                <div>
+                    <p>Телефон</p>
+                    <input type="text" name="userPhone" required placeholder="0661234567">
+                </div>
+            </div>
+        </div>
+        <button type="submit">Зареєструватися</button>
+        <a onclick="ShowModalAuth()">Вже зареєстровані?</a>
+        <div class="hrSimulator">
+            <div></div>
+            <p>АБО</p>
+            <div></div>
+        </div>
+        <h2>Зареєструватися за допомогою...</h2>
+        <a class="GoogleSignIn">
+            <img src="Images/google.png" alt="">
+            <p>GOOGLE</p>
+        </a>
+    </form>
+    <script>
+    document.getElementById("submit").addEventListener("click", (e)=>{
+        e.preventDefault()
+        let backForm = document.forms["feedback"]
+        let userName = backForm.elements["username"].value
+        let email = backForm.elements["mail"].value
+        let message = backForm.elements["questText"].value
+        
+        let feedback = JSON.stringify({name: userName, mail: email, text: message})
+        let req = new XMLHttpRequest()
+
+        req.open("POST", "/feedback",true)
+        req.setRequestHeader("Content-Type", "application/json")
+        
+        req.send(feedback)
+    })
+</script>
+</div>

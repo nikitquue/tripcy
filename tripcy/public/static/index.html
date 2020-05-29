@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HOME</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <header>
+                <a href="index.html" class="logo"></a>
+                <div class="headerLinks">
+                    <a href="guides.html">Гіди</a>
+                    <a href="schedule.html">Розклад</a>
+                    <a href="map.html">Мапа</a>
+                </div>
+                <div class="searchBlock">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="headerSearch" placeholder="Наприклад, Собор">
+                </div>
+
+                <div class="authorizationBlock">
+                    <a onclick="ShowModalAuth()">Увійти</a>
+                    <p>|</p>
+                    <a onclick="ShowModalReg()">Зареєструватися</a>
+                </div>
+            </header>
+            <main>
+                <div class="previewMain">
+                    <a href="map.html"></a>
+                    <div>
+                        <h1>Tripcy -</h1>
+                        <h3>кращий вибір<br>
+                            для прогулянки<br>
+                            Харковом</h3>
+                    </div>
+                </div>
+                <div class="excursionsMain">
+                    <h2>Наші екскурсії</h2>
+                    <div class="firstExLine">
+                        <div class="exPreview">Релігійний Харків</div>
+                        <div class="exPreview">Без чого Харків -<br> не Харків</div>
+                    </div>
+                    <div class="secondExLine">
+                        <div class="exPreview">Історія однієї вулиці </div>
+                        <div class="exPreview"> Садиба навіжених </div>
+                        <div class="exPreview">Харків - <br> місто універів </div>
+                    </div>
+
+                </div>
+                <div class="advantagesBlock">
+                    <h2>Наші переваги</h2>
+                    <div class="advantagesfirstline">
+                        <div class="advantageBlock">
+                            <div class="circleBlock">
+                                <h1>1</h1>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Aenean
+                                euismod bibendum laoreet. Proin</p>
+
+                        </div>
+                        <div class="advantageBlock">
+                            <div class="circleBlock">
+                                <h1>2</h1>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Aenean
+                                euismod bibendum laoreet. Proin</p>
+                        </div>
+                        <div class="advantageBlock">
+                            <div class="circleBlock">
+                                <h1>3</h1>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet,<br>
+                                consectetur adipiscing elit. Aenean<br>
+                                euismod bibendum laoreet. Proin<br>
+                            </p>
+                        </div> 
+                    </div>                   
+                    <div class="advantagesSecondLine">
+                        <div class="advantageBlock">
+                            <div class="circleBlock">
+                                <h1>4</h1>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet,<br>
+                                consectetur adipiscing elit. Aenean<br>
+                                euismod bibendum laoreet. Proin</p>
+                        </div>
+                        <div class="advantageBlock">
+                            <div class="circleBlock">
+                                <h1>5</h1>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet,<br>
+                                consectetur adipiscing elit. Aenean<br>
+                                euismod bibendum laoreet. Proin</p>
+                        </div>
+                    </div>                
+                </div>
+                <div class="questionsBlock">
+                    <div class="formQuestion">
+                        <form action="" method="POST">
+                            <h1>З'явилися питання?</h1>
+                            <input type ="text" placeholder="Ваше ім'я">
+                            <input type ="text" placeholder="Електрона пошта">
+                            <textarea name="questText" placeholder="Повідомлення"></textarea>
+                            <button>Надіслати</button>
+                        </form>
+                    </div>
+                </div>                                    
+        </main>
+    </div>  
+    <footer>
+        <a href="tel:+380673939649" class="footerEl">
+         <i class="fas fa-mobile-alt"></i>
+            <p>+38 067 39 39 649</p>
+        </a>
+        <a href="" class="footerEl">
+            <i class="far fa-envelope"></i>
+               <p>tripcy@tour.com</p>
+           </a>
+           <a href="" class="footerEl">
+            <i class="fab fa-instagram"></i>
+               <p>@tripcy_tours</p>
+           </a>
+           <a href="" class="footerEl">
+            <i class="fab fa-google-play"></i>
+               <p>Our mobile app</p>
+           </a>
+    </footer>
+    </div>
+    <div class="modalAuth">
+        <form action="" class="authorizationForm" method="POST">
+            <h1>Вхід</h1>
+            <p>Електрона пошта</p>
+            <input type="email" name="checkMail" required placeholder="ivan.ivanov@gmail.com">
+            <p>Пароль</p>
+            <input type="password" name="checkPwd" required placeholder="ivanov123ivan">
+            <button type="submit">Увійти</button>
+            <a onclick="ShowModalReg()">Вперше на сайті?</a>
+            <div class="hrSimulator">
+                <div></div>
+                <p>АБО</p>
+                <div></div>
+            </div>
+            <h2>Увійти за допомогою...</h2>
+            <a class="GoogleSignIn">
+                <img src="Images/google.png" alt="">
+                <p>GOOGLE</p>
+            </a>
+        </form>
+        <form action="" class="registrForm" method="POST">
+            <h1>Реєстрація</h1>
+            <div class="registerBox">
+                <div class="registerLine">
+                    <div>
+                        <p>Ім'я</p>
+                        <input type="text" name="userName" required placeholder="Іванов Іван">
+                    </div>
+                    <div>
+                        <p>Електрона пошта</p>
+                        <input type="text" name="userEmail" required placeholder="ivanov@gmail.com">
+                    </div>
+                </div>
+                <div class="registerLine">
+                    <div>
+                        <p>Пароль</p>
+                        <input type="text" name="userPwd" required placeholder="Пароль">
+                    </div>
+                    <div>
+                        <p>Телефон</p>
+                        <input type="text" name="userPhone" required placeholder="0661234567">
+                    </div>
+                </div>
+            </div>
+            <button type="submit">Зареєструватися</button>
+            <a onclick="ShowModalAuth()">Вже зареєстровані?</a>
+            <div class="hrSimulator">
+                <div></div>
+                <p>АБО</p>
+                <div></div>
+            </div>
+            <h2>Зареєструватися за допомогою...</h2>
+            <a class="GoogleSignIn">
+                <img src="Images/google.png" alt="">
+                <p>GOOGLE</p>
+            </a>
+        </form>
+    </div>
+    <script src="./JS/script.js" async defer></script>
+</body>
+
+</html>

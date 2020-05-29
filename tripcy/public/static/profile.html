@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HOME</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="content">
+            <header>
+                <a href="index.html" class="logo"></a>
+                <div class="headerLinks">
+                    <a href="guides.html">Гіди</a>
+                    <a href="schedule.html">Розклад</a>
+                    <a href="map.html">Мапа</a>
+                </div>
+                <div class="searchBlock">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="headerSearch" placeholder="Наприклад, Собор">
+                </div>
+
+                <div class="authorizationBlock">
+                    <a class="profileLink">
+                        <img src="./Images/profile.png" alt="">
+                        <a href="#" class="active">Мій профіль</a>
+                    </a>
+                    
+                    <p>|</p>
+                    <a href="#">Вийти</a>
+                </div>
+            </header>
+            <main>
+                <div class="profileBlock">
+                    <div class="bioDescBlock">
+                        <img src="./Images/profile.png" alt="">
+                        <div class="bioInfo">
+                            <p>Ім'я: <span>Євгенія Гребенчук</span></p>
+                            <p>Пошта: <span>yevheniia.hrebenchuk@nure.ua</span></p>
+                            <p>Телефон: <span>067 64 94 608</span></p>
+                        </div>                                              
+                    </div>
+                    <div class="profileTabs">
+                        <a class="activeTab" onclick="ShowCardInfo()" id="recTab">Реквізити</a>
+                        <a onclick="ShowAchievementsTab()" id="achieveTab">Досягнення</a>                            
+                    </div>
+                    <div class="profileInfoBlock">
+                        <div class="noCard">
+                            <h4>Немає даних про картку</h4>
+                            <button onclick="ShowAddCard()">Додати картку</button>                                                
+                        </div>  
+                        <div class="addCard">
+                            <h4>Додати картку</h4>
+                            <form action="" method="POST">                                
+                                <div class="requisites">
+                                    <div>
+                                        <p>Ім'я власника</p>
+                                        <input type="text" placeholder="Ivanov Ivan">                                        
+                                    </div>
+                                    <div>
+                                        <p>Номер карти</p>
+                                        <input type="text" required placeholder="1234 5678 9012 3456">
+                                    </div>                                                                          
+                                    <div class="cardDateBlock">
+                                        <div><p>Термін дії</p><input type="text" required placeholder="12/20"></div>
+                                        <div><p>CVV</p> <input type="text" required placeholder="123"></div>
+                                    </div> 
+                                </div>                               
+                                <a>Додати</a>
+                            </form>
+                        </div>  
+                        <div class="achievemntsBlock">
+                            <h2>Ваші досягнення</h2>
+                            <div class="achievementsGrid">
+                                <div class="achievement">
+                                    <img src="./Images/smart.jpg" alt="">
+                                    <h4>Просунутий?</h4>
+                                    <p>Додав свою картку в профілі</p>                                
+                                </div>
+                                <div class="achievement">
+                                    <img src="./Images/smart.jpg" alt="">
+                                    <h4>Просунутий?</h4>
+                                    <p>Додав свою картку в профілі</p>                                
+                                </div>
+                                <div class="achievement">
+                                    <img src="./Images/smart.jpg" alt="">
+                                    <h4>Просунутий?</h4>
+                                    <p>Додав свою картку в профілі</p>                                
+                                </div>
+                                <div class="achievement">
+                                    <img src="./Images/smart.jpg" alt="">
+                                    <h4>Просунутий?</h4>
+                                    <p>Додав свою картку в профілі</p>                                
+                                </div>
+                                <div class="achievement">
+                                    <img src="./Images/smart.jpg" alt="">
+                                    <h4>Просунутий?</h4>
+                                    <p>Додав свою картку в профілі</p>                                
+                                </div>
+                                <div class="achievement">
+                                    <img src="./Images/smart.jpg" alt="">
+                                    <h4>Просунутий?</h4>
+                                    <p>Додав свою картку в профілі</p>                                
+                                </div>
+                            </div>
+                        </div>                   
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer>
+            <a href="tel:+380673939649" class="footerEl">
+                <i class="fas fa-mobile-alt"></i>
+                <p>+38 067 39 39 649</p>
+            </a>
+            <a href="" class="footerEl">
+                <i class="far fa-envelope"></i>
+                <p>tripcy@tour.com</p>
+            </a>
+            <a href="" class="footerEl">
+                <i class="fab fa-instagram"></i>
+                <p>@tripcy_tours</p>
+            </a>
+            <a href="" class="footerEl">
+                <i class="fab fa-google-play"></i>
+                <p>Our mobile app</p>
+            </a>
+
+        </footer>
+    </div>        
+    <script src="./JS/script.js" async defer></script>
+</body>
+
+</html>
