@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HOME</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+      />
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="content">
+            <header>
+                <a href="index.html" class="logo"></a>
+                <div class="headerLinks">
+                    <a href="guides.html">Гіди</a>
+                    <a href="#">Розклад</a>
+                    <a href="map.html">Мапа</a>
+                </div>
+                <div class="searchBlock">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="headerSearch" placeholder="Наприклад, Собор">
+                </div>
+
+                <div class="authorizationBlock">
+                    <a onclick="ShowModalAuth()">Увійти</a>
+                    <p>|</p>
+                    <a onclick="ShowModalReg()">Зареєструватися</a>
+                </div>
+            </header>
+            <main>
+                <div class="tourBlock">
+                    <h2>Релігійний Харків</h2>
+                    <div class="sightsMarks">
+                        <a style="padding: 1.2vw 1vw 1.2vw 1vw;" href="#pokrovSobor">Покровський собор</a>
+                        <a href="#womensMironos">Храм Святих<br> Жінок-Мироносиць</a>
+                        <a href="#saintMarija">Собор Успіння<br> Пресвятої Діви Марії</a>
+                    </div>
+                    <div class="tourInfo">
+                        <ul>
+                            <li><span>Тривалість: </span>1-1,5 години</li>
+                            <li><span>Загальна пройдена відстань: </span>~ 2 км</li>
+                            <li><span>Мова екскурсії: </span>українська</li>
+                        </ul>
+                    </div>
+                    <div class="photoSphereBlock">
+                        <div class="iframeWrap">
+                            <iframe
+                                src="https://momento360.com/e/u/873b209a9c2a4d338af5c94febe1664a?utm_campaign=embed&utm_source=other&heading=330.5247821017121&pitch=28.61934279282871&field-of-view=100"
+                                frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <p class="descriptionTour">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quas hic rerum necessitatibus
+                        velit voluptate voluptatem, amet odio earum incidunt dolores veritatis quo adipisci non
+                        voluptatum.
+                        Exercitationem nihil distinctio consectetur?
+                    </p>
+                    <div class="toRecordBlock">
+                        <div>
+                            <h3>Вартість</h3>
+                            <p>Індивідуальна (1-5) - 400 грн/людина</p>
+                            <p>Маленька (6-20) - 300 грн/людина</p>
+                            <p>Велика (21-40) - 200 грн/людина</p>
+                        </div>
+                        <a href="#">Записатися</a>
+                    </div>
+                    <div class="sightBlock" id="pokrovSobor">
+                        <div class="descriptionSight">
+                            <h3>Покровський собор</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Aenean euismod bibendum laoreet. Proin gravida dolor sit amet
+                                lacus accumsan et viverra justo commodo. Proin sodales pulvinar
+                                sic tempor. Sociis natoque penatibus et magnis dis parturient
+                                montes, nascetur ridiculus mus.</p>
+                        </div>
+                        <div class="slideShowSight">
+                            <div class="slideShowWrap">                                
+                                <img src="./Images/1.png" class="imgSight" id="imgSight1" >                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sightBlock" id="womensMironos">
+                        <div class="descriptionSight">
+                            <h3>Храм Святих<br> Жінок-Мироносиць</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Aenean euismod bibendum laoreet. Proin gravida dolor sit amet
+                                lacus accumsan et viverra justo commodo. Proin sodales pulvinar
+                                sic tempor. Sociis natoque penatibus et magnis dis parturient
+                                montes, nascetur ridiculus mus.</p>
+                        </div>
+                        <div class="slideShowSight">
+                            <div class="slideShowWrap">                                
+                                <img src="./Images/1.png" class="imgSight" id="imgSight2" >                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sightBlock" id="saintMarija">
+
+                        <div class="descriptionSight">
+                            <h3>Собор Успіння<br> Пресвятої Діви Марії</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Aenean euismod bibendum laoreet. Proin gravida dolor sit amet
+                                lacus accumsan et viverra justo commodo. Proin sodales pulvinar
+                                sic tempor. Sociis natoque penatibus et magnis dis parturient
+                                montes, nascetur ridiculus mus.</p>
+                        </div>
+                        <div class="slideShowSight">
+                            <div class="slideShowWrap">                                
+                                <img src="./Images/1.png" class="imgSight" id="imgSight3">                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="locationBlock">
+                        <h2>Місце зустрічі</h2>
+                        <div class="sightWrap">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2565.0312707772587!2d36.227638715598175!3d49.99202317941464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a0f0871dad1b%3A0x26bfd091006708c9!2z0J_QvtC60YDQvtCy0YHQutC40Lkg0JzQvtC90LDRgdGC0YvRgNGM!5e0!3m2!1sru!2sua!4v1589472290416!5m2!1sru!2sua"
+                            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                            tabindex="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer>
+            <a href="tel:+380673939649" class="footerEl">
+                <i class="fas fa-mobile-alt"></i>
+                <p>+38 067 39 39 649</p>
+            </a>
+            <a href="" class="footerEl">
+                <i class="far fa-envelope"></i>
+                <p>tripcy@tour.com</p>
+            </a>
+            <a href="" class="footerEl">
+                <i class="fab fa-instagram"></i>
+                <p>@tripcy_tours</p>
+            </a>
+            <a href="" class="footerEl">
+                <i class="fab fa-google-play"></i>
+                <p>Our mobile app</p>
+            </a>
+
+        </footer>
+    </div>
+    <div class="modalAuth">
+        <form action="" class="authorizationForm" method="POST">
+            <h1>Вхід</h1>
+            <p>Електрона пошта</p>
+            <input type="email" name="checkMail" required placeholder="ivan.ivanov@gmail.com">
+            <p>Пароль</p>
+            <input type="password" name="checkPwd" required placeholder="ivanov123ivan">
+            <button type="submit">Увійти</button>
+            <a onclick="ShowModalReg()">Вперше на сайті?</a>
+            <div class="hrSimulator">
+                <div></div>
+                <p>АБО</p>
+                <div></div>
+            </div>
+            <h2>Увійти за допомогою...</h2>
+            <a class="GoogleSignIn">
+                <img src="Images/google.png" alt="">
+                <p>GOOGLE</p>
+            </a>
+        </form>
+        <form action="" class="registrForm" method="POST">
+            <h1>Реєстрація</h1>
+            <div class="registerBox">
+                <div class="registerLine">
+                    <div>
+                        <p>Ім'я</p>
+                        <input type="text" name="userName" required placeholder="Іванов Іван">
+                    </div>
+                    <div>
+                        <p>Електрона пошта</p>
+                        <input type="text" name="userEmail" required placeholder="ivanov@gmail.com">
+                    </div>
+                </div>
+                <div class="registerLine">
+                    <div>
+                        <p>Пароль</p>
+                        <input type="text" name="userPwd" required placeholder="Пароль">
+                    </div>
+                    <div>
+                        <p>Телефон</p>
+                        <input type="text" name="userPhone" required placeholder="0661234567">
+                    </div>
+                </div>
+            </div>
+            <button type="submit">Зареєструватися</button>
+            <a onclick="ShowModalAuth()">Вже зареєстровані?</a>
+            <div class="hrSimulator">
+                <div></div>
+                <p>АБО</p>
+                <div></div>
+            </div>
+            <h2>Зареєструватися за допомогою...</h2>
+            <a class="GoogleSignIn">
+                <img src="Images/google.png" alt="">
+                <p>GOOGLE</p>
+            </a>
+        </form>
+    </div>
+
+    <script src="./JS/script.js" async defer></script>
+</body>
+
+</html>

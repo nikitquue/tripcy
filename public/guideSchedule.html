@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HOME</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="content">
+            <header>
+                <a href="index.html" class="logo"></a>
+                <div class="headerLinks">
+                    <a href="guides.html">Гіди</a>
+                    <a href="guideSchedule.html" class="active">Мій розклад</a>
+                    <a href="map.html">Мапа</a>
+                </div>
+                <div class="searchBlock">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="headerSearch" placeholder="Наприклад, Собор">
+                </div>
+
+                <div class="authorizationBlock">
+                    <a onclick="ShowModalAuth()">Увійти</a>
+                    <p>|</p>
+                    <a onclick="ShowModalReg()">Зареєструватися</a>
+                </div>
+            </header>
+            <main>
+                <div class="scheduleBlock">
+                    <div class="filterBlock">
+                        <h3>Обрати дату:</h3>
+                        <select>
+                            <option value="22.03">22.03</option>
+                            <option value="22.03">22.03</option>
+                            <option value="22.03">22.03</option>
+                            <option value="22.03">22.03</option>
+                        </select>
+                    </div>
+                    <div class="dateBlock">22.03.2020</div>
+                    <div class="scheduleWrap">
+                        <div class="traceBlock">
+                            <img class="step" src="./Images/r_step.png">
+                            <img class="step" src="./Images/l_step.png">
+                            <img class="step" src="./Images/r_step.png">
+                            <img class="step" src="./Images/l_step.png">
+                            <img class="step" src="./Images/r_step.png">
+                            <img class="step" src="./Images/l_step.png">
+                            <div class="pointBlock">
+                                <div class="circle"></div>
+                                <p>13:00</p>
+                            </div>
+                            <img class="step" src="./Images/l_step.png">
+                            <img class="step" src="./Images/r_step.png">
+                            <img class="step" src="./Images/l_step.png">
+                            <img class="step" src="./Images/r_step.png">
+                            <img class="step" src="./Images/l_step.png">
+                            <img class="step" src="./Images/r_step.png">
+                            <img class="step" src="./Images/l_step.png">
+                            <img class="step" src="./Images/r_step.png">
+                            <img class="step" src="./Images/l_step.png">
+                            <img class="step" src="./Images/r_step.png">
+                            <div class="pointBlock">
+                                <div class="circle"></div>
+                                <p>13:00</p>
+                            </div>
+                        </div>
+                        <div class="excursionsBlock">
+                            <div class="excursion">
+                                <div class="mainInfo">
+                                    <img src="./Images/schedule_tour.png" alt="">
+                                    <div class="description">
+                                        <h3>Релігійний Харків</h3>
+                                        <div class="sightsOfEx">
+                                            <h4>Покровський собор</h4>
+                                            <h4>Храм Святих<br> Жінок-Мироносиць</h4>
+                                            <h4>Собор Успіння<br> Пресвятої Діви Марії</h4>
+                                        </div>
+                                        <div class="moreInfoBlock">
+                                            <p><span>Де: </span>вул Шаленого Кодзюби, 47</p>
+                                            <p><span>Коли: </span>22.03.2020 у 13:00</p>
+                                            
+                                            <p><span>Вид екскурсії: </span>Індивідуальна (1-5 людей)</p>
+                                            <p><span>Ціна: </span>400 грн за особу</p>
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </div>
+                            <div class="excursion">
+                                <div class="mainInfo">
+                                    <img src="./Images/schedule_tour.png" alt="">
+                                    <div class="description">
+                                        <h3>Релігійний Харків</h3>
+                                        <div class="sightsOfEx">
+                                            <h4>Покровський собор</h4>
+                                            <h4>Храм Святих<br> Жінок-Мироносиць</h4>
+                                            <h4>Собор Успіння<br> Пресвятої Діви Марії</h4>
+                                        </div>
+                                        <div class="moreInfoBlock">
+                                            <p><span>Де: </span>вул Шаленого Кодзюби, 47</p>
+                                            <p><span>Коли: </span>22.03.2020 у 13:00</p>                                            
+                                            <p><span>Вид екскурсії: </span>Індивідуальна (1-5 людей)</p>
+                                            <p><span>Ціна: </span>400 грн за особу</p>
+                                        </div>
+                                    </div>
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </main>
+    </div>
+    <footer>
+        <a href="tel:+380673939649" class="footerEl">
+            <i class="fas fa-mobile-alt"></i>
+            <p>+38 067 39 39 649</p>
+        </a>
+        <a href="" class="footerEl">
+            <i class="far fa-envelope"></i>
+            <p>tripcy@tour.com</p>
+        </a>
+        <a href="" class="footerEl">
+            <i class="fab fa-instagram"></i>
+            <p>@tripcy_tours</p>
+        </a>
+        <a href="" class="footerEl">
+            <i class="fab fa-google-play"></i>
+            <p>Our mobile app</p>
+        </a>
+
+    </footer>
+    </div>
+    <div class="modalAuth">
+        <form action="" class="authorizationForm" method="POST">
+            <h1>Вхід</h1>
+            <p>Електрона пошта</p>
+            <input type="email" name="checkMail" required placeholder="ivan.ivanov@gmail.com">
+            <p>Пароль</p>
+            <input type="password" name="checkPwd" required placeholder="ivanov123ivan">
+            <button type="submit">Увійти</button>
+            <a onclick="ShowModalReg()">Вперше на сайті?</a>
+            <div class="hrSimulator">
+                <div></div>
+                <p>АБО</p>
+                <div></div>
+            </div>
+            <h2>Увійти за допомогою...</h2>
+            <a class="GoogleSignIn">
+                <img src="Images/google.png" alt="">
+                <p>GOOGLE</p>
+            </a>
+        </form>
+        <form action="" class="registrForm" method="POST">
+            <h1>Реєстрація</h1>
+            <div class="registerBox">
+                <div class="registerLine">
+                    <div>
+                        <p>Ім'я</p>
+                        <input type="text" name="userName" required placeholder="Іванов Іван">
+                    </div>
+                    <div>
+                        <p>Електрона пошта</p>
+                        <input type="text" name="userEmail" required placeholder="ivanov@gmail.com">
+                    </div>
+                </div>
+                <div class="registerLine">
+                    <div>
+                        <p>Пароль</p>
+                        <input type="text" name="userPwd" required placeholder="Пароль">
+                    </div>
+                    <div>
+                        <p>Телефон</p>
+                        <input type="text" name="userPhone" required placeholder="0661234567">
+                    </div>
+                </div>
+            </div>
+            <button type="submit">Зареєструватися</button>
+            <a onclick="ShowModalAuth()">Вже зареєстровані?</a>
+            <div class="hrSimulator">
+                <div></div>
+                <p>АБО</p>
+                <div></div>
+            </div>
+            <h2>Зареєструватися за допомогою...</h2>
+            <a class="GoogleSignIn">
+                <img src="Images/google.png" alt="">
+                <p>GOOGLE</p>
+            </a>
+        </form>
+    </div>
+    <div class="modalPay">
+        <form action="">
+            <div class="recordToExc">
+                <h4>Запис на екскурсію</h4>
+                <div>
+                    <p>Назва екскурсії</p>
+                    <input type="text" required readonly value="Релігійний Харків">                    
+                </div>
+                <div>
+                    <p>Дата</p>
+                    <input type="text" required readonly value="23.04.2020">
+                    <p>Час</p>
+                    <input type="text" required readonly value="13:00">
+                </div>
+                <div>
+                    <p>Вартість</p>
+                    <input type="text" value="400грн" required readonly>
+                </div>
+                <div>
+                    <p>Ім'я</p>
+                    <input type="text" required placeholder="Іванов Іван">
+                </div>
+                <div>
+                    <p>Телефон</p>
+                    <input type="tel" required placeholder="0673939649">
+                </div>
+                <div>
+                    <p>Електрона пошта</p>
+                    <input type="email" required placeholder="mailpost@mail.com">
+                </div>
+                <div>
+                    <a onclick="CloseModalPay()">Назад</a>
+                    <a onclick="PayNextStep()">Далі</a>
+                </div>
+            </div>
+            <div class="chosePayBlock">
+                <h4>Оплата екскурсії</h4>
+                <div>
+                    <input type="radio" name="typeOfPay" id="cash">
+                    <label for="cash" onclick="ShowCashBlock()">Готівкою</label>                                                           
+                    <input type="radio" name="typeOfPay" id="card">
+                    <label for="card" onclick="ShowCardBlock()">Карткою</label> 
+                </div>
+                <div class="cashBlock">                    
+                    <p>Оплата екскурсії проводиться<br> при зустрічі із гідом!</p>
+                    <button onclick="ShowSuccessBlock()">Підтвердити</button>
+                </div>
+                <div class="cardBlock">                    
+                        <div>
+                            <p>Ім'я власника</p>
+                            <input type="text" required placeholder="Іванов Іван">
+                        </div>
+                        <div>
+                            <p>Номер картки</p>
+                            <input type="text" required placeholder="1234 5678 9012 3456">
+                        </div>
+                        <div>
+                            <p>Термін дії</p>
+                            <input type="text" required placeholder="12/20">
+                            <p>CVV</p>
+                            <input type="text" required placeholder="123">
+                        </div>
+                        <button onclick="ShowSuccessBlock()">Сплатити</button>                    
+                </div>               
+            </div>
+            <div class="successRegBlock">
+                <h4>Дякуємо!</h4>
+                <p> Ви записані. Чекайте<br> підтвердження на електроній пошті. Гарно<br> провести час!</p>
+                <button onclick="CloseModalPay()">Ок</button>
+            </div>
+        </form>
+    </div>
+    <script src="./JS/script.js" async defer></script>
+</body>
+
+</html>
