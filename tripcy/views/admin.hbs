@@ -1,0 +1,122 @@
+<main>
+    <div class="profileBlock">                   
+        <div class="profileTabs">
+            <a class="activeTab" id="excursionsTab" onclick="ShowExTab()">Екскурсії</a>
+            <a id="guidesTab" onclick="ShowGuidesTab()">Гіди</a>                            
+            <a id="scheduleTab" onclick="ShowScheduleTab()">Розклад</a>                                                 
+            <a id="sightsTab" onclick="ShowSightsTab()">Пам'ятки</a>  
+        </div>
+        <div class="profileInfoBlock">
+
+
+            <div class="ExcursionsBlock" id="exBlock">
+                <div class="excursionList">
+
+                    
+                    <div class="excursionInList">
+                        {{#each tours}}
+                        <img src="./Images/tours/{{image}}.jpg" alt="photo">                        
+                        <div class="excDescInList">
+                            <h2>{{title}}</h2>
+                            <div class="sightsOfEx">
+                                {{#each this.sights}}
+                                <h4>{{this}}</h4>
+                                {{/each}}
+                            </div>        
+                            <p>{{description}}</p>             
+                        </div>
+                        {{/each}}
+                        <div class="actionsWithExc">
+                            <i class="fas fa-pen" onclick="ShowModalEditExc()"></i>
+                            <i class="far fa-trash-alt"></i>
+                        </div>
+                    </div>
+
+
+                    
+                    
+                                          
+                </div>
+
+                <button style="align-self: center; margin-top: 3vw; outline: none;" onclick="ShowModalAddExc()">Додати екскурсію</button>
+            </div>  
+
+
+            <div class="guidesBlock" id="guidesBlock">
+            <div class="excursionList">
+                    {{#each guides}}
+                    <div class="excursionInList">
+                        <img src="{{image}}" alt="photo">
+                        <div class="excDescInList">
+                            <h2>{{name}} {{surname}}</h2>  
+                            <p style="color:#fff">Телефон : {{phone}}</p></br>                                        
+                            <p>{{description}}</p>             
+                        </div> 
+                        <div class="actionsWithExc">
+                            <i class="fas fa-pen" onclick="ShowModalEditGuide()"></i>
+                            <i class="far fa-trash-alt"></i>
+                        </div>
+                    </div>
+                    {{/each}}   
+
+                    <button style="align-self: center; margin-top: 3vw; outline: none;" onclick="ShowModalAddGuide()">Додати гіда</button>                                            
+                </div>                                
+        </div> 
+
+
+        <div class="schedBlock" id="schedBlock">
+            <div class="excursionList">
+                
+                {{#each events}}
+                <div class="excursionInList">
+                        <img src="./Images/tours/{{image}}.jpg" alt="">
+                        <div class="excDescInList">
+                            <h2>{{tour}}</h2>
+                            <div class="sightsOfEx">
+                            {{#each this.sights}}
+                                    <h4>{{this}}</h4>
+                             {{/each}}
+                            </div>  
+                            <p style="color:#fff">Де: {{adress}}</p>      
+                            <p style="color:#fff">Коли: {{date}} у {{time}}</p>      
+                            <p style="color:#fff">Гід: {{guideSurname}} {{guideName}}</p>
+                            <p style="color:#fff">Вид: {{groupType}}</p>
+                            <p style="color:#fff">Ціна: {{cost}} грн за особу</p></br>
+                            <p>{{description}}</p>             
+                        </div> 
+                        <div class="actionsWithExc">
+                            <i class="fas fa-pen" onclick="ShowModalEditSched()"></i>
+                            <i class="far fa-trash-alt"></i>
+                        </div>
+                </div>
+                {{/each}}
+
+            <button style="align-self: center; margin-top: 3vw; outline: none;" onclick="ShowModalAddSched()">Додати екскурсію</button>
+            </div>
+        </div> 
+
+
+        <div class="siBlock" id="siBlock">
+            <div class="excursionList">
+
+                {{#each sights}}
+                <div class="excursionInList">
+                        <img src="../Images/sights/{{image}}.jpg" alt="photo">
+                        <div class="excDescInList">
+                            <h2>{{title}}</h2></br>
+                            <p>{{description}}</p>             
+                        </div> 
+                        <div class="actionsWithExc">
+                            <i class="fas fa-pen" onclick="ShowModalEditSight()"></i>
+                            <i class="far fa-trash-alt"></i>
+                        </div>
+                </div>    
+                {{/each}}   
+
+            </div>           
+            <button style="align-self: center; margin-top: 3vw; outline: none;" onclick="ShowModalAddSight()">Додати Пам'ятку</button>
+            </div>     
+        </div>                                     
+        </div>
+    </div>
+</main>

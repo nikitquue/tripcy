@@ -1,0 +1,2100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Root";
+    src: url(../Fonts/RootLight.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Root";
+    src: url(../Fonts/RootBold.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Ed";
+    src: url(../Fonts/Edo_SZ.ttf);
+    font-weight: 300;
+}
+
+$darkBlue:#120A43;
+$blueSearch:#1C1259;
+$purple:#3E3286;
+$subPurple:#493D91;
+$lightPurple:#5E53A1;
+$green:#88D498;
+$pink:#D41BB3;
+$moon:#B0B7D1;
+$placeholder:#646464;
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background: $darkBlue;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+h2{
+    font-family: "Century Gothic";
+    font-size: 3vw;
+    color: #fff; 
+    margin-bottom: 4vw;       
+ }
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 98vh;
+}
+
+.content {
+    flex: 1 0 auto;
+    height: 100%;
+
+
+    header {
+        width: 85vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            display: block;
+            width: 5vw;
+            height: 5vw;
+            background: url(../Images/logo.png);
+            background-size: cover;
+            margin-top: 0.5vw;
+        }
+
+        .headerLinks {
+            width: 18vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                color: #fff;
+                font-size: 1.4vw;
+                font-family: "Root";
+                font-weight: 300;
+                transition: 400ms;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                    opacity: 0.7;
+                }
+            }
+
+            .active {
+                color: $pink;
+                font-weight: 400;
+            }
+        }
+
+        .searchBlock {
+            display: flex;
+            align-items: center;
+            width: 28vw;
+            background: $blueSearch;
+            height: 0.7vw;
+            padding: 1vw;
+            border-radius: 2vw;
+
+            i {
+                color: $moon;
+                font-size: 1.4vw;
+                margin-right: 1vw;
+            }
+
+            input {
+                background: none;
+                border: 0;
+                color: $moon;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1.1vw;
+                width: 100%;
+                height: 2vw;
+                outline: none;
+
+                &::placeholder {
+                    color: $placeholder;
+                    font-style: italic;
+                }
+            }
+        }
+
+        .authorizationBlock {
+            width: 18vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .profileLink{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                img{
+                    width: 2vw;
+                    height: 2vw;
+                    margin-right: 1vw;                    
+                }
+                &:hover{
+                    transform: scale(1);
+                    cursor: pointer;
+                }
+            }
+            a {
+                color: #fff;
+                font-size: 1.4vw;
+                font-family: "Root";
+                font-weight: 300;
+                transition: 400ms;
+
+                &:hover {
+                    transform: scale(1.1);
+                    opacity: 0.7;
+                    cursor: pointer;
+                }
+                
+            }
+            .active {
+                color: $pink;
+                font-weight: 400;
+                &:hover{
+                    transform: scale(1);
+                }
+            }
+
+            p {
+                color: #fff;
+                font-size: 1.5vw;
+            }
+        }
+    }
+
+    main {
+        margin-top: 8vw;
+
+        .previewMain {
+            width: 85vw;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            a {
+                display: block;
+                width: 40vw;
+                height: 27vw;
+                background: url(../Images/map.jpg);
+                background-size: cover;
+                transition: 400ms;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                h1 {
+                    font-family: "Ed";
+                    font-size: 10vw;
+                    color: #fff;
+                    font-weight: 250;
+                    margin-bottom: 1vw;
+                    margin-top: -2vw;
+                }
+
+                h3 {
+                    font-family: "Century Gothic";
+                    color: #fff;
+                    font-size: 3.5vw;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .interactiveMap {
+            margin: 0 auto;
+
+            h2 {
+                font-family: "Century Gothic";
+                font-size: 4vw;
+                color: #fff;
+                text-align: center; //отмена не
+                margin-bottom: 1.5vw;
+            }
+
+            p {
+                font-family: "Century Gothic";
+                font-weight: 300;
+                font-size: 1.7vw;
+                color: #fff;
+                text-align: center;
+                margin-bottom: 1.5vw;
+            }
+
+            .mapBlock {
+                //вот у него задай позишин, а не у большого папы
+                width: 85vw;
+                margin: 0 auto;
+                position: relative;
+
+
+                img {
+                    width: 85vw;
+                    height: 40vw;
+                    margin: 0 auto;
+                    //position: absolute;
+                    z-index: 1;
+                }
+
+                i {
+                    color: $purple;
+                    position: absolute;
+                    font-size: 5vw;
+                    z-index: 2;
+                    transition: 400ms;
+
+                    &:hover {
+                        transform: scale(1.15);
+                        opacity: 0.9;
+                        cursor: pointer;
+
+                    }
+                }
+
+                #regKha {
+                    top: 2vw;
+                    right: 35vw;
+                }
+
+                #withoutKha {
+                    top: 2vw;
+                    right: 65vw;
+                }
+
+                #historyKha {
+                    top: 30vw;
+                    right: 67vw;
+                }
+
+                #crazyHouse {
+                    top: 25vw;
+                    right: 12vw;
+                }
+
+                #univerKha {
+                    top: 8vw;
+                    right: 74vw;
+                }
+
+
+
+
+            }
+        }
+
+        .excursionsMain {
+            width: 85vw;
+            margin: 0 auto;
+            margin-top: 10vw;
+
+            h2 {
+                font-family: "Century Gothic";
+                font-size: 2.5vw;
+                color: #fff;
+                text-align: center;
+            }
+
+            .firstExLine {
+                margin-top: 2vw;
+                width: 85vw;
+                height: 25vw;
+                display: flex;
+                justify-content: space-between;
+
+                .exPreview {
+                    width: 42vw;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-family: "Century Gothic";
+                    font-weight: 600;
+                    font-size: 2.5vw;
+
+                    &:nth-child(1) {
+                        background: url(../Images/chirch.jpg);
+                        background-size: cover;
+                    }
+
+                    &:nth-child(2) {
+                        background: url(../Images/gosprom.jpg);
+                        background-size: cover;
+                    }
+                }
+            }
+
+
+            .secondExLine {
+                margin-top: 1vw;
+                width: 85vw;
+                height: 22vw;
+                display: flex;
+                justify-content: space-between;
+
+                .exPreview {
+                    width: 27.7vw;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-family: "Century Gothic";
+                    font-weight: 600;
+                    font-size: 2.5vw;
+
+                    &:nth-child(1) {
+                        background: url(../Images/castle.jpg);
+                        background-size: cover;
+                    }
+
+                    &:nth-child(2) {
+                        background: url(../Images/mental_hosp.jpg);
+                        background-size: cover;
+                    }
+
+                    &:nth-child(3) {
+                        background: url(../Images/karasin.jpg);
+                        background-size: cover;
+                    }
+                }
+            }
+
+        }
+
+        .advantagesBlock {
+            width: 85vw;
+            margin: 0 auto;
+            margin-top: 5vw;
+
+            h2 {
+                font-family: "Century Gothic";
+                font-size: 2.5vw;
+                color: #fff;
+                text-align: center;
+            }
+
+            .advantagesfirstline {
+                margin: 0 auto;
+                margin-top: 3vw;
+                width: 85vw;
+                //height: 25vw;
+                display: flex;
+                justify-content: space-evenly;
+
+                .advantageBlock {
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        font-family: "Century Gothic";
+                        color: #fff;
+                        text-align: center;
+                    }
+
+                    .circleBlock {
+
+                        width: 14vw;
+                        height: 14vw;
+                        background-color: $purple;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        align-self: center;
+
+                        h1 {
+                            font-family: "Century Gothic";
+                            font-weight: 600;
+                            font-size: 8vw;
+                            color: #fff;
+                            text-shadow: 6px 3px 0 $placeholder;
+                        }
+                    }
+
+                    p {
+                        text-align: center;
+                        max-width: 14vw;
+                    }
+
+                }
+
+            }
+
+            .advantagesSecondLine {
+                margin: 0 auto;
+                //margin-top: 1vw;
+                width: 50vw; // ETO OKE 
+                height: 25vw;
+                display: flex;
+                justify-content: space-evenly;
+
+                .advantageBlock {
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        font-family: "Century Gothic";
+                        color: #fff;
+                        max-width: 14vw;
+                        text-align: center;
+                    }
+
+                    .circleBlock {
+                        width: 14vw;
+                        height: 14vw;
+                        background-color: $purple;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        align-self: center;
+
+                        h1 {
+                            font-family: "Century Gothic";
+                            font-weight: 600;
+                            font-size: 8vw;
+                            color: #fff;
+                            text-shadow: 6px 3px 0 $placeholder;
+
+
+                        }
+                    }
+
+                }
+            }
+
+
+        }
+
+        .questionsBlock {
+            //height: 100vh;
+            width: 100%;
+            background: url(../Images/wall.jpg);
+            background-size: cover;
+            padding-top: 4vw;
+            padding-bottom: 4vw;
+            .formQuestion {
+                margin-top: 0;
+                //padding-top: 4vw;
+                width: 35vw;
+                background: rgba($color: $purple, $alpha: 0.5);
+                border-radius: 2vw;
+                margin: 0 auto;
+
+                form {
+                    margin: 0 auto;
+                    width: 27vw;
+                   // height: 80vh;
+                   
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    h1 {
+                        color: #fff;
+                        font-family: "Century Gothic";
+                        font-weight: 600;
+                        font-size: 3vw;
+                        text-align: center;
+                        padding-top: 1vw;
+                        margin-bottom: 1vw;
+                    }
+
+                    input {
+                        border-radius: 5vw;
+                        margin-bottom: 2.5vw;
+                        border: 0;
+                        background-color: $darkBlue;
+                        width: 27vw;
+                        height: 1vw;
+                        padding: 1vw;
+                        color: #fff;
+                        outline: none;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 1.1vw;
+
+                        &::placeholder {
+                            color: $placeholder;
+                            font-style: italic;
+                        }
+                    }
+
+                    textarea {
+                        background-color: $darkBlue;
+                        border: 0;
+                        width: 27vw;
+                        min-height: 10vw;
+                        border-radius: 2vw;
+                        resize: none;
+                        padding: 1vw;
+                        color: #fff;
+                        outline: none;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 1.1vw;
+                        margin-bottom: 3vw;
+
+                        &::placeholder {
+                            color: $placeholder;
+                            font-style: italic;
+                        }
+
+                    }
+
+                    button {
+                        width: 10vw;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 1.3vw;
+                        padding: 1vw;
+                        border: 0;
+                        border-radius: 1vw;
+                        background: $green;
+                        align-self: flex-end;
+                        outline: none;
+                        transition: 400ms;
+                        margin-bottom: 5vw;
+                        &:hover{
+                            transform: scale(1.1);
+                            cursor: pointer;    
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+ .guidesPageBlock{
+     width: 85vw;
+     margin:0 auto;    
+     .guideBox{
+         display: flex;
+         justify-content: space-between;         
+         align-items: center;
+         margin-bottom: 10vw;
+         img{
+             width:15vw;
+             height: 15vw;
+         }
+         .guideContent{
+            width: 45vw;
+            h3{
+                font-family: "Century Gothic";
+                font-size: 2.5vw;
+                color: #fff;  
+                margin-bottom: 1vw;
+            }
+            p{
+                font-family: "Century Gothic";
+                font-size: 1.7vw;
+                color:#fff;
+                margin-bottom: 1vw;
+            }
+            .guideRate{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 35vw;                                
+                h4{
+                    font-family: "Century Gothic";
+                    font-size: 2vw;
+                    font-weight: 600;
+                    color:#fff;                    
+                }
+                .starsBlock{                    
+                    display: flex;
+                    justify-content: space-between;                  
+                    flex-direction: row-reverse;
+                   label{
+                       transition: 400ms transform;
+                       &:hover{
+                        transform: scale(1.1);
+                        i{
+                            color: $pink;
+                        }
+                       }
+                       &:hover ~ label{
+                        transform: scale(1.1);
+                        i{
+                            color: $pink;
+                        }
+                       }
+                       i{
+                           font-size: 3vw;
+                           color: $moon;
+                           margin-left: 0.3vw;
+                       }                      
+                   }
+                   input{
+                    display: none;                   
+                    &:checked ~ label{
+                        i{
+                            color: $pink;
+                        }
+                        
+                    }
+                    }              
+                }
+               
+            }
+        }
+        &:nth-of-type(even){
+            flex-direction: row-reverse;
+        }
+     }
+     
+
+ }
+
+.tourBlock{
+    width: 85vw;
+    margin:0 auto;
+    .sightsMarks{
+        width: 50vw;
+        display: flex;
+        align-items: center;
+        margin-top: -2vw;
+        justify-content: space-between;
+        margin-bottom: 4vw;
+        a{                                    
+            font-family: "Century Gothic";
+            font-size: 1.3vw;
+            line-height: 1.5vw;
+            vertical-align: center;
+            padding: 0.5vw 1vw 0.5vw 1vw;            
+            background: rgba($color: $subPurple, $alpha: 1);
+            color: $moon;
+            border-radius: 0.5vw;            
+        }        
+    }
+    .tourInfo{
+        margin-bottom: 4vw;
+        ul{
+            margin-left: 1vw;
+            li{
+                font-family:"Century Gothic";
+                font-size: 1.6vw;
+                color:#fff;
+                margin-bottom: 1vw;
+                span{
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .photoSphereBlock{
+        background: url(../Images/oval.png);
+        background-size: 100% 100%;
+        background-position-y: -1vw;
+        transform: rotate(10deg);
+        .iframeWrap{
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%;
+            width: 60vw;
+            margin:0 auto;
+            transform: rotate(-10deg);
+            iframe{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 80%;
+                border: 0;
+            }
+        }
+    }
+}
+.descriptionTour{
+    width: 60vw;
+    font-size: 1.8vw;    
+    font-family: "Century Gothic";
+    color:#fff;
+    margin:0 auto;
+    margin-bottom: 4vw;
+}
+.toRecordBlock{
+    width: 53vw;
+    margin:0 auto;
+    background:$lightPurple;
+    border-radius: 1vw;
+    padding: 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7vw;
+    h3{
+        color:#fff;
+        font-family: "Century Gothic";
+        font-size: 2.2vw;
+        font-weight: 600;
+        margin-bottom: 1vw;
+    }
+    p{
+        font-family: "Century Gothic";
+        color:#fff;
+        font-size: 1.2vw;
+        margin-bottom: 0.5vw;
+    }   
+    a{
+        padding: 1vw;
+        background: $green;
+        border-radius: 1vw;
+        font-size: 2.2vw;
+        font-family: "Century Gothic";
+        font-weight: 600;
+        color:#000;
+        transition:400ms;
+        &:hover{
+            transform:scale(1.02);
+        }
+    } 
+}
+.sightBlock{
+    width: 85vw;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10vw;
+    .descriptionSight{
+        width: 40vw;
+        h3{
+            font-family: "Century Gothic";
+            font-size: 2vw;
+            color:#fff;
+            text-indent: 2vw;
+            margin-bottom: 1vw;
+        }
+        p{
+            font-family: "Century Gothic";
+            font-size: 1.3vw;
+            text-indent: 2vw;
+            font-weight: 300;
+            color:#fff;
+        }
+    }
+    .slideShowSight{
+        width: 30vw;
+        height: 20vw;
+        background: url(../Images/oval.png);
+        background-size: 100% 100%;
+        transform: rotate(-5deg);
+        display: flex;        
+        align-items: center;                
+        .slideShowWrap{
+            width: 30vw;
+            transform: rotate(5deg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;           
+            .imgSight{
+                width: 20vw;
+                height:15vw;
+                align-self: center;    
+                margin: 0 auto;           
+            }        
+        }  
+      
+    }
+    &:nth-of-type(even){
+        flex-direction: row-reverse;
+    }
+}
+.locationBlock{
+    width: 85vw;
+    margin: 0 auto;
+    h2{
+        text-align: center;
+    }
+    .sightWrap{
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%;
+        width: 60vw;
+        margin:0 auto;
+        iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80%;
+            border: 0;
+        }
+    }
+}
+.scheduleBlock{
+    width:85vw;
+    margin:0 auto;
+    .filterBlock{
+        width: 30vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 4vw;
+        margin-bottom: 3vw;
+        h3{
+            font-family: "Century Gothic";
+            font-size: 1.8vw;
+            color:#fff;
+            font-weight: 600;
+        }
+        select{
+            width: 15vw;
+            padding: 0.5vw;
+            padding-left: 1vw;
+            padding-right: 1vw;
+            background: $blueSearch;
+            border:0;
+            color:$moon;
+            font-family: "Century Gothic";
+            font-size: 1.2vw;
+            text-align: center;
+            outline: none;
+            
+            border-radius: 2vw;
+            &:focus{
+                outline: none;
+            }
+            option{
+                border:0;
+                outline: none;
+            }
+        }
+    }
+    .dateBlock{
+            padding: 0.6vw;
+            padding-left: 2vw;
+            padding-right: 3vw;
+            font-family: "Century Gothic";
+            font-size: 1.4vw;
+            font-weight: 600;
+            text-align: center;
+            color:#000;            
+            background: $moon;
+            border-radius: 2vw;
+            width: 20vw;
+            margin-bottom: 1vw;
+    }
+    .scheduleWrap{
+        width: 85vw;
+        margin:0 auto;
+        display: flex;
+        justify-content: space-between;
+        .traceBlock{
+            position: relative;
+            width: 3vw;  
+            margin-left: 1vw;                      
+            .step{
+                width: 1vw;
+                height: 2vw;
+                transform: rotate(180deg);
+                margin-right:2vw;
+                margin-bottom: 0.5vw;
+                &:nth-child(even){
+                    margin-left: 2vw;
+                }
+            }
+            .pointBlock{
+                width: 7vw;
+                display: flex; 
+                align-items: center;               
+                justify-content: space-between;
+                .circle{
+                    width:3vw;
+                    height: 3vw;
+                    background: $moon;
+                    border-radius: 50%;
+                }
+                p{
+                    font-family: "Century Gothic";
+                    color:#fff;
+                    font-size: 1.4vw;
+                    font-weight: 600;
+                }
+            }
+        }
+        .excursionsBlock{
+            .excursion{
+                width: 65vw;
+                background: $lightPurple;
+                padding:2vw;
+                border-radius: 1vw;
+                margin-bottom: 4vw;
+                .mainInfo{
+                    display: flex;
+                    //justify-content: space-between;            
+                    img{
+                        width: 20vw;
+                        height: 20vw;
+                        margin-right: 3vw;
+                    }
+                    .description{
+                        h3{
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-size: 1.8vw;
+                            font-weight: 600;
+                            color:#fff;
+                            margin-bottom: 1vw;
+                        }                 
+                        .sightsOfEx{
+                            width: 40vw;
+                            display: flex;                              
+                            justify-content: space-between;
+                            h4{                            
+                                font-family: "Century Gothic";
+                                font-size: 0.8vw;
+                                line-height: 0.8vw;
+                                vertical-align: center;
+                                padding: 0.5vw 1vw 0.5vw 1vw;            
+                                background: rgba($color: $subPurple, $alpha: 1);
+                                color: $moon;
+                                border-radius: 0.2vw; 
+                                margin-bottom: 2vw;                                                                                 
+                            }                           
+                        }    
+                        .moreInfoBlock{
+                            p{
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 1vw;
+                                color:#fff;
+                                span{
+                                    font-weight: 600;
+                                    font-size:1.2vw;
+                                    margin-right: 1vw;
+                                }
+                                &:last-of-type{
+                                    margin-top:1vw ;
+                                    font-size: 1.4vw;
+                                    span{
+                                        font-size: 1.6vw;
+                                    }
+                                }
+                            }
+                        }                           
+                    }                    
+                }
+                .actionsBlock{
+                    display: flex;
+                    margin-top: 1vw;
+                    justify-content: space-around;
+                    a{
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 1.8vw;
+                        color:#000;
+                        font-weight: 600;
+                        background: $green;                        
+                        border-radius: 1vw;
+                        padding: 1.4vw 4vw 1.4vw 4vw;
+                        text-align: center;
+                        min-width: 20vw;
+                        transition: 400ms;
+                        &:last-of-type{
+                            min-width: initial;
+                            background: #fff;
+                        }
+                        &:hover{
+                            cursor: pointer;
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.profileBlock{
+    width: 85vw;
+    margin:0 auto;
+    .bioDescBlock{
+        width: 85vw;
+        margin:0 auto;
+        display: flex;
+        align-items: center;   
+        margin-bottom: 8vw;
+        img{
+            width: 15vw;
+            height: 15vw;
+            margin-right: 5vw;
+        }
+        .bioInfo{
+            p{
+                font-family: "Century Gothic";
+                font-size: 2vw;
+                color:#fff;
+                font-weight: 300;
+                margin-bottom: 0.7vw;                
+                span{
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .profileTabs{
+        width: 30vw;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10vw;     
+        position: relative;
+        margin-bottom: -3vw;
+        z-index: 1;   
+        a{
+            font-family: "Century Gothic";
+            font-size: 1vw;
+            color:#fff;
+            background: $purple;
+            padding: 0.7vw 4vw 3vw 4vw;
+            border-radius: 1vw;   
+            transition: 400ms;
+            &:hover{
+                transform: scale(1.05);
+                cursor: pointer;
+            }         
+        }
+        .activeTab{
+            background: $lightPurple;
+        }
+    }
+    .profileInfoBlock{
+        width: 75vw;
+        background:$lightPurple;
+        padding: 5vw;
+        position: relative;
+        z-index: 2;
+        border-radius: 1vw;
+        display: flex;
+        flex-direction: column;
+        h4{
+            font-family: "Century Gothic";
+            font-size: 3vw;
+            color:#fff;
+            text-align: center;
+            margin-bottom: 4vw;
+        }
+        .noCard{
+            width: 50vw;
+            display: flex;
+            flex-direction: column;
+            //align-items: center;
+            align-self: center;
+        }
+        button{
+            font-family: "Century Gothic";
+            font-size: 3vw;
+            color:#fff;
+            font-weight: 600;
+            background: $green;
+            border-radius: 1vw;
+            padding: 1vw 3vw 1vw 3vw;
+            border:0;
+            margin:0 auto;
+            margin-bottom: 3vw;
+            align-self:center;
+            transition: 400ms;
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+        }
+        .addCard{
+            margin: 0 auto;
+            display: none;
+            form{                
+                width: 40vw;
+                background: $moon;
+                padding: 1vw;
+                border-radius: 1vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                //margin: 0 auto;
+                .requisites{
+                    margin-top: 1vw;
+                    width: 40vw;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    div{
+                        width: 30vw;
+                        display: flex;                        
+                        align-items: center;
+                        justify-content: space-between;
+                        align-self: center;
+                        p{
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-weight: 600;
+                            color: #ffffff;
+                            font-size: 1.2vw;                            
+                        }
+                        input{
+                            width: 20vw;
+                            background: $blueSearch;
+                            border:0;
+                            font-size: 1.2vw;
+                            outline: none;
+                            padding: 0.7vw 1vw 0.7vw 1vw;
+                            border-radius: 2vw;
+                            color:#fff;
+                            margin-bottom: 1vw;
+                        }                        
+                    }
+                    .cardDateBlock{
+                        margin-bottom: 2vw;                        
+                        div{
+                            width: 14vw;
+                            display: flex;
+                            justify-content: space-evenly;                            
+                            p{
+                                margin-right:4vw;
+                            }
+                        }
+                        width: 30vw;
+                        display: flex;
+                        align-items: center;
+                        align-self: center;
+                        justify-content: space-between;                        
+                        input{
+                            width: 5vw;                           
+                        }
+                    }                   
+                }
+                a{
+                    display: flex;
+                    text-align: center;
+                    background: $green;
+                    margin-left: 18vw;
+                    margin-bottom: 1vw;
+                    padding: 0.5vw 2vw 0.5vw 2vw;                    
+                    border-radius: 1vw;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: 600;
+                    font-size: 2vw;
+                    color: $darkBlue;
+                    transition: 400ms transform;
+                    &:hover{
+                        transform: scale(1.05);
+                        cursor: pointer;
+                    }
+                }
+            }                        
+        }
+        .achievemntsBlock{
+            display: none;
+            width: 60vw;
+            margin: 0 auto;
+           .achievementsGrid{
+               display: grid;
+               grid-template-columns:1fr 1fr 1fr 1fr ;
+               grid-gap: 2vw;
+               .achievement{
+                   width: 10vw;
+                   display: flex;
+                   flex-direction: column;
+                   align-items: center;
+                   img{
+                       width: 10vw;
+                       height: 10vw;
+                       object-fit: cover;
+                       border-radius: 50vw;
+                   }
+                   h4{
+                       font-size: 2vw;
+                       margin-bottom: 1vw;
+                   }
+                   p{
+                       font-family: Arial, Helvetica, sans-serif;
+                       font-size: 1.1vw;
+                       color:$moon;
+                   }
+               }
+           }
+        }
+    }
+}
+footer {    
+    flex-shrink: 0;
+    margin-top: 7vw;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #0B0341;
+    height: 5vw;
+
+    .footerEl {
+        display: flex;
+        align-items: center;
+
+        i {
+            font-size: 3vw;
+            color: $pink;
+            text-shadow: 0 0 3px $pink;
+            margin-right: 1vw;
+        }
+
+        p {
+            font-size: 1.4vw;
+            font-family: Arial;
+            font-weight: 300;
+            color: $pink;
+            text-shadow: 0 0 3px $pink;
+        }
+
+    }
+} 
+.modalAuth{
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: #000, $alpha: 0.6);
+    position: fixed;
+    z-index: 999;
+    top:0;
+    
+    left:0;
+    .registrForm{
+        width: 50vw;        
+        //height: 30vw;
+        background: $lightPurple;
+        display: flex;
+        //display: none;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 2vw;        
+        .registerBox{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .registerLine{
+                width: 45vw;
+                display: flex;
+                justify-content: space-between;
+            }            
+        }
+        h1{
+            padding: 1vw;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2.5vw;
+            text-align: center;
+            color:#fff;
+            font-weight: 600;
+            margin-bottom: 2vw;
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2vw;
+            color:#fff;
+            margin-bottom: 0.5vw;
+            text-align: left;
+            
+        }
+        input{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1vw;
+            background-color: $blueSearch;
+            padding: 0.9vw 1vw 0.9vw 1vw;
+            width: 20vw;
+            border-radius: 2vw;
+            border:0;
+            outline: none;
+            margin-bottom: 1vw;
+            color: $moon;
+            &:last-of-type{
+                margin-bottom: 1.5vw;
+            }
+        }
+        button{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            font-size: 1.5vw;
+            color:#fff;
+            background: $green;
+            border-radius: 1vw;
+            outline: none;
+            padding: 1vw 7vw 1vw 7vw;
+            border:0;
+            transition: 400ms transform;
+            margin-bottom: 0.7vw;
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.03);
+            }
+        }
+        a{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1vw;
+            color:$blueSearch;
+            font-weight: 600;
+            text-decoration: underline; 
+            margin-bottom: 2vw;
+            transition: 400ms font-size;
+            &:hover{
+                cursor: pointer;
+                font-size: 1.1vw;
+            }           
+        }
+        .hrSimulator{
+            display:flex;
+            width: 50vw;
+            align-items: center;
+            justify-content: space-between;
+            //background-color: $darkBlue;
+            div{
+                display: block;
+                width: 23vw;
+                height: 0.2vw;
+                background: $darkBlue;                                           
+            }
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;                
+            }               
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5vw;  
+            margin-bottom:1vw          
+        }
+        .GoogleSignIn{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: $moon;            
+            text-decoration: none;  
+            padding: 0.5vw 1.5vw 0.5vw 1.5vw;                 
+            border-radius: 2vw;
+            transition: 400ms transform;
+            &:hover{
+                transform: scale(1.05);
+            }
+            img{
+                width: 2vw;
+                height: 2vw;
+                margin-right:2vw;
+            }
+            p{
+                font-size: 1vw;
+                padding: 0;
+                margin:0;
+            }        
+
+        }
+    }
+    .authorizationForm{
+        width: 50vw;        
+        //height: 30vw;
+        background: $lightPurple;
+        display: flex;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 2vw;
+        h1{
+            padding: 1vw;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2.5vw;
+            text-align: center;
+            color:#fff;
+            font-weight: 600;
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2vw;
+            color:#fff;
+            margin-bottom: 0.5vw;
+            text-align: left;
+            
+        }
+        input{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1vw;
+            background-color: $blueSearch;
+            padding: 0.9vw 1vw 0.9vw 1vw;
+            width: 20vw;
+            border-radius: 2vw;
+            border:0;
+            outline: none;
+            margin-bottom: 1vw;
+            color: $moon;
+            &:last-of-type{
+                margin-bottom: 1.5vw;
+            }
+        }
+        button{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            font-size: 1.5vw;
+            color:#fff;
+            background: $green;
+            border-radius: 1vw;
+            outline: none;
+            padding: 1vw 7vw 1vw 7vw;
+            border:0;
+            transition: 400ms transform;
+            margin-bottom: 0.7vw;
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.03);
+            }
+        }
+        a{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1vw;
+            color:$blueSearch;
+            font-weight: 600;
+            text-decoration: underline; 
+            margin-bottom: 2vw;
+            transition: 400ms font-size;
+            &:hover{
+                cursor: pointer;
+                font-size: 1.1vw;
+            }           
+        }
+        .hrSimulator{
+            display:flex;
+            width: 50vw;
+            align-items: center;
+            justify-content: space-between;
+            //background-color: $darkBlue;
+            div{
+                display: block;
+                width: 23vw;
+                height: 0.2vw;
+                background: $darkBlue;                                           
+            }
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;                
+            }               
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5vw;  
+            margin-bottom:1vw          
+        }
+        .GoogleSignIn{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: $moon;            
+            text-decoration: none;  
+            padding: 0.5vw 1.5vw 0.5vw 1.5vw;                 
+            border-radius: 2vw;
+            transition: 400ms transform;
+            &:hover{
+                transform: scale(1.05);
+            }
+            img{
+                width: 2vw;
+                height: 2vw;
+                margin-right:2vw;
+            }
+            p{
+                font-size: 1vw;
+                padding: 0;
+                margin:0;
+            }        
+
+        }
+    }    
+}
+.modalPay{
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: #000, $alpha: 0.6);
+    position: fixed;
+    z-index: 999;
+    top:0;
+    form{
+        width: 40vw;
+        padding: 1vw;
+        background: $lightPurple;
+        border-radius: 1vw;
+    }
+    .recordToExc{
+        width: 40vw;        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h4{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2vw;
+            color:#fff;
+            font-weight: 600;    
+            margin-bottom: 2vw;        
+        }
+        div{
+            width: 30vw;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1vw;
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+                color:#fff;
+                font-size: 1.2vw;               
+            }
+            input{
+                //background: $purple;
+                padding: 0.5vw;
+                border-radius: 2vw;
+                border:0;
+                outline: none;
+                background: $blueSearch;
+                color:$moon;                
+            }
+            input[readonly]{
+                background: $subPurple;
+            }
+            &:last-of-type{
+                margin-top: 3vw;
+            }
+            a{
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;
+                color:$darkBlue;
+                font-size: 2vw;
+                padding: 0.5vw 2vw 0.5vw 2vw;
+                border-radius:1vw ;
+                background: $moon;
+                transition: 400ms transform;
+                &:last-of-type{
+                    background: $green;
+                }                
+                &:hover{
+                    cursor: pointer;
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+    .chosePayBlock{
+        width: 40vw;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        h4{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2vw;
+            color:#fff;
+            font-weight: 600;    
+            margin-bottom: 2vw;        
+        }
+        div{
+            width: 30vw;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1vw;
+            label{
+                font-family: Arial, Helvetica, sans-serif;
+                color:#fff;
+                font-size: 2vw; 
+                font-weight: 600;
+                transition: 400ms opacity;
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.7;
+                    
+                }
+
+            }
+            input{
+                //background: $purple;
+                display: none;
+                padding: 0.5vw;
+                border-radius: 2vw;
+                border:0;
+                outline: none;
+                background: $blueSearch;
+                color:$moon;                
+            }
+            input:checked + label{
+                color:$green;
+            }
+        }
+        .cashBlock{
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+                color:#fff;
+                font-size: 1.5vw; 
+                margin-bottom: 4vw; 
+                margin-top: 3vw;              
+            }
+            button{
+                align-self: flex-end;
+                padding: 0.5vw 2vw 0.5vw 2vw;
+                border-radius:1vw ;
+                border:0;
+                outline: none;
+                background: $green;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;
+                font-size: 2vw;
+                color:$darkBlue;
+                transition: 400ms transform;
+                &:hover{
+                    cursor: pointer;
+                    transform: scale(1.05);
+                }
+            }
+        }
+        .cardBlock{
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 35vw;
+            
+            div{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 1vw;
+                width: 35vw;
+                 p{
+                    font-family: Arial, Helvetica, sans-serif;
+                    color:#fff;
+                    font-size: 1.2vw;               
+                }
+                input{
+                    //background: $purple;
+                    display: block;
+                    padding: 0.5vw;
+                    border-radius: 2vw;
+                    border:0;
+                    outline: none;
+                    background: $blueSearch;
+                    color:$moon;                
+                }
+                &:last-of-type{
+                    margin-bottom: 3vw;
+                }
+            }
+           
+            button{
+                align-self: flex-end;
+                padding: 0.5vw 2vw 0.5vw 2vw;
+                border-radius:1vw ;
+                border:0;
+                outline: none;
+                background: $green;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;
+                font-size: 2vw;
+                color:$darkBlue;
+                transition: 400ms transform;
+                &:hover{
+                    cursor: pointer;
+                    transform: scale(1.05);
+                }
+            }
+        }       
+    }
+    .successRegBlock{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        h4{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2vw;
+            color:#fff;
+            font-weight: 600;    
+            margin-bottom: 2vw;        
+        }          
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            color:#fff;
+            font-size: 1.5vw; 
+            margin-bottom: 4vw; 
+            margin-top: 3vw;              
+        }
+        button{
+            //align-self: flex-end;
+            padding: 0.5vw 2vw 0.5vw 2vw;
+            border-radius:1vw ;
+            border:0;
+            outline: none;
+            background: $green;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            font-size: 2vw;
+            color:$darkBlue;
+            transition: 400ms transform;
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+        }
+    }        
+}
+.modalMarkers{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items:center;
+    z-index: 999;
+    top:0;
+    left: 0;
+    background-color: rgba($color: #000, $alpha: 0.6);
+    .marker{
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;                
+        background: $lightPurple;
+        padding: 1vw;
+        border-radius: 2vw;
+        .markerWrap{
+            width: 40vw;
+            display: flex;
+            justify-content: space-between;
+            //align-items: center;
+            img{
+                width: 15vw;
+                height: 15vw;                
+            }
+            .markerDesc{
+                h2{
+                    font-size: 2.5vw;
+                    margin-bottom: 1vw;
+                }            
+                div{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 1vw;
+                    p{
+                        width: 8vw;
+                        //max-width: 50vw;
+                        background: $subPurple;
+                        border-radius: 0.3vw;
+                        padding: 0.7vw 1vw 0.7vw 1vw;
+                        text-align: center;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 0.7vw;
+                        color:$moon;
+                    }
+                }
+            }            
+        }
+        .markerActions{
+            margin-top: 4vw;
+            margin-bottom: 1vw;
+            width: 40vw;
+            display: flex;
+            justify-content:space-around;
+            a{
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;
+                font-size: 2vw;
+                padding: 1.2vw;
+                border-radius: 1vw;
+                transition: 400ms transform;
+                color: $darkBlue;
+                background: $green;
+                &:hover{
+                    transform: scale(1.05);
+                }
+                &:last-of-type{
+                    background: #fff;
+                }
+            }
+        }
+    }
+
+}
+
+.excursionInList{
+    width: 75vw;
+    display: flex;
+    padding: 1vw;    
+    justify-content: space-between;
+    img{
+        width: 20vw;
+        height: 15vw;
+        margin-right: 3vw;
+        object-fit: cover;
+    }
+    
+    h2 {
+        font-family: "Century Gothic";
+        font-size: 2vw;
+        color: #fff;
+        text-align: center;
+        margin-bottom:0.5vw;
+    }
+    .exDescInList{
+        width: 20vw;
+    }
+    .sightsOfEx{
+        width: 35vw;
+        display: flex;                              
+        justify-content: space-between;
+        h4{                            
+            font-family: "Century Gothic";
+            font-size: 0.8vw;
+            line-height: 0.8vw;
+            vertical-align: center;
+            padding: 0.5vw 1vw 0.5vw 1vw;            
+            background: rgba($color: $subPurple, $alpha: 1);
+            color: $moon;
+            border-radius: 0.2vw; 
+            margin-bottom: 2vw;                                                                                 
+        }                           
+    }   
+    p{
+        width: 40vw;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2vw;
+        color:$moon;        
+    } 
+    i{
+        color: $blueSearch;
+        font-size: 2vw;  
+        margin-right: 2vw; 
+        //transition: 400ms transform;     
+        transition: 400ms color, 400ms transform;     
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            color:$green;
+        }
+    }
+}
+.modal{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;    
+    justify-content: center;
+    align-items:center;
+    z-index: 999;
+    top:0;
+    left: 0;
+    background-color: rgba($color: #000, $alpha: 0.6);
+}
+.modalEditExc{    
+    form{
+        width: 50vw;        
+        //height: 30vw;
+        background: $lightPurple;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 2vw;
+        div{
+            width: 45vw;
+            display: flex;
+            justify-content: space-between;
+        }
+        textarea{
+            width: 42vw;
+            background: $blueSearch;
+            border-radius: 2vw;
+            resize: none;
+            padding: 1vw;
+            outline: none;
+            border:0;
+            margin-bottom: 1vw;
+            color:$moon;
+        }
+        h1{
+            padding: 1vw;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2.5vw;
+            text-align: center;
+            color:#fff;
+            font-weight: 600;
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2vw;
+            color:#fff;
+            margin-bottom: 0.5vw;
+            text-align: left;
+            
+        }
+        input{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1vw;
+            background-color: $blueSearch;
+            padding: 0.5vw 1vw 0.5vw 1vw;
+            width: 20vw;
+            border-radius: 2vw;
+            border:0;
+            outline: none;
+            margin-bottom: 1vw;
+            color: $moon;
+            &:last-of-type{
+                margin-bottom: 1.5vw;
+            }
+        }
+        select{
+            width: 15vw;
+            padding: 0.5vw;
+            padding-left: 1vw;
+            padding-right: 1vw;
+            background: $blueSearch;
+            border:0;
+            color:$moon;
+            font-family: "Century Gothic";
+            font-size: 1vw;
+            text-align: center;
+            outline: none;
+            margin-bottom: 1vw;
+            border-radius: 2vw;
+            &:focus{
+                outline: none;
+            }
+            option{
+                border:0;
+                outline: none;
+            }
+        }
+        }
+        button{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            font-size: 1.2vw;
+            color:#fff;
+            background: $green;
+            border-radius: 1vw;
+            outline: none;
+            padding: 1vw 7vw 1vw 7vw;
+            border:0;
+            transition: 400ms transform;
+            margin-bottom: 0.7vw;
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.03);
+            }
+        }
+    }
+
+.guidesBlock{
+    display: none;
+}
+.schedBlock{
+    display: none;
+}
+.siBlock{
+    display: none;
+}
+
+@media only screen  and (max-width:1024px) {
+    .content{
+        header{
+            width: 95vw;            
+            .logo{
+                width: 10vw;
+                height: 10vw;
+            }
+            .headerLinks{
+                width: 30vw;
+                a{
+                    font-size: 3.3vw;
+                }
+            }
+            .searchBlock{
+                width: 20vw;
+                height: 3vw;
+                input{
+                    font-size: 2vw;
+                }                
+                
+            }
+            .authorizationBlock {
+                display: flex;
+                flex-direction: column;
+                p{
+                    display: none;
+                }
+                a{
+                    font-size: 2vw;                    
+                }
+            }
+        }
+    }
+    footer{
+        height: 10vw;
+        a{           
+            p{
+                display: none;
+            }
+            i{
+                font-size: 6vw !important;
+                color: $green;
+            }
+        }
+       
+    }
+    .excursionsMain{
+        padding-bottom: 5vw;
+    }
+    .advantagesBlock{
+        display: none;
+    }
+    .questionsBlock{
+        .formQuestion{
+            width: 80vw !important;
+            height: auto !important;
+            form{
+                h1{
+                    font-size: 7vw;
+                }
+                input{
+                    margin-top: 1vw;
+                    width: 60vw !important;
+                    padding: 2vw !important;
+                    font-size: 2vw !important;
+                }
+                textarea{
+                    width: 60vw !important;
+                    font-size: 2vw !important;
+                    height: 20vw;
+                }
+                button{
+                    font-size: 4vw !important;
+                    padding:2vw !important;
+                    width: auto !important;
+                }
+            }
+           
+
+        }
+    }
+    
+    
+}

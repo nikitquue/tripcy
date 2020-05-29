@@ -1,0 +1,28 @@
+{
+  "name": "tripcy",
+  "version": "1.0.0",
+  "description": "Kharkiv Tours",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index"
+  },
+  "keywords": [
+    "kharkiv",
+    "tours",
+    "ukrain",
+    "tourism",
+    "tourist",
+    "tripcy"
+  ],
+  "author": "Jaine Hre yevgeniia.hrebenchuk@nure.ua Daniel Suv daniil.suvorov@nure.ua",
+  "license": "ISC",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "hbs": "^4.1.1",
+    "mongoose": "^5.9.14",
+    "nodemailer": "^6.4.6",
+    "nodemon": "^2.0.4"
+  }
+}
