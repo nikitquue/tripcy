@@ -1,0 +1,75 @@
+<form name="feedback" id="feedback">
+    <div id="formContent">    
+    <h1>З'явилися питання?</h1>
+    <input type ="text" name="username" placeholder="Ваше ім'я" onclick="delBorder('username')">
+    <input type = "email" name="mail" placeholder="Електрона пошта" onclick="delBorder('mail')">
+    <textarea name="questText" placeholder="Повідомлення" onclick="delBorder('questText')"></textarea>
+    <p id="error" style="margin: 1vw; opacity: 0; color: red; font-style: italic; font-family: Arial, Helvetica, sans-serif;">Error</p>
+    <button type="submit" id="submitFdb">Надіслати</button>
+    </div>
+
+    <div id="thanks" style="display: none; ">
+        <h1 style="margin: auto;">Дякуємо!<br> Ваш запит буде оброблено найближчим часом!<br></h1>
+    </div>
+</form>
+
+<script>
+    function delBorder(name) {
+         document.forms["feedback"].elements[name].style.border = 'none'
+         document.getElementById("error").innerHTML = ''
+    }
+
+
+    document.getElementById("submitFdb").addEventListener("click", (e)=>{
+        e.preventDefault()
+        let backForm = document.forms["feedback"]
+
+        let userName = backForm.elements["username"]
+        let email = backForm.elements["mail"]
+        let message = backForm.elements["questText"]
+
+        let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        let isCorrect = true
+        let elem = document.getElementById("error")
+        let fields = [userName, email, message]
+        for (var i = 0; i < fields.length; i++) {
+            if (fields[i].value.trim() == '') {
+                fields[i].style.border = '1px solid red'
+                elem.innerHTML = "Всі поля повинні бути заповнені"
+                elem.style.opacity = '1'
+                isCorrect = false     
+            }
+        }
+        
+        if(isCorrect){
+            if(reg.test(email.value) == false){
+                elem.innerHTML = "Невірно введено email"
+                elem.style.opacity = '1'
+                isCorrect = false 
+            }
+        }
+
+        if(isCorrect) {              
+            let feedback = JSON.stringify({name: userName.value, mail: email.value, text: message.value})
+            let req = new XMLHttpRequest()
+
+            req.open("POST", "/feedback",true)
+            req.setRequestHeader("Content-Type", "application/json")
+             
+            var thankContent = document.getElementById('thanks')
+            var formContent = document.getElementById('formContent')
+            thankContent.style.display = 'block'
+            formContent.style.display = 'none'
+            req.send(feedback)
+            setTimeout(function() {
+                thankContent.style.display = 'none'
+                formContent.style.display = 'block'
+                document.getElementById('feedback').reset()
+
+                elem.innerHTML = "Error"
+                elem.style.opacity = '0'
+            }, 7000);
+        }
+    })
+</script>

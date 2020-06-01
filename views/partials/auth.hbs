@@ -1,0 +1,248 @@
+<div class="modalAuth">
+    <form action="" class="authorizationForm" name="authForm" method="POST">
+        <h1>Вхід</h1>
+        <p>Електрона пошта</p>
+        <input type="email" name="usEmail" required placeholder="ivan.ivanov@gmail.com" onclick="deleBorder('usEmail', 'errorAuth')">
+        <p>Пароль</p>
+        <input type="password" name="usPwd" required placeholder="ivanov123ivan" onclick="deleBorder('usPwd', 'errorAuth')"> 
+        <p id="errorAuth" style="margin-bottom: 1vw;text-align: center;color: red;opacity: 0;font-style: italic;font-family: Arial, Helvetica, sans-serif;">Error</p>
+        <button id="submitAuthUser">Увійти</button>
+        <a onclick="ShowModalReg()">Вперше на сайті?</a>
+        <div class="hrSimulator">
+            <div></div>
+            <p>АБО</p>
+            <div></div>
+        </div>
+        <h2>Увійти за допомогою...</h2>
+        <a class="GoogleSignIn">
+            <img src="Images/google.png" alt="">
+            <p>GOOGLE</p>
+        </a>
+    </form>
+
+
+    <form action="/user/register" class="registrForm" name="rgForm" method="POST">
+        <h1>Реєстрація</h1>
+        <div class="registerBox">
+            <div class="registerLine">
+                <div>
+                    <p>Ім'я</p>
+                    <input type="text" name="userName" required placeholder="Іван" onclick="deleBorder('userName', 'errorReg')">
+                </div>
+                <div>
+                    <p>Електрона пошта</p>
+                    <input type="text" name="userEmail" required placeholder="ivanov@gmail.com" onclick="deleBorder('userEmail', 'errorReg')">
+                </div>
+            </div>
+            <div class="registerLine">
+                <div>
+                    <p>Пароль</p>
+                    <input type="password" name="userPwd" required placeholder="Пароль" maxlength="32" onclick="deleBorder('userPwd', 'errorReg')">
+                </div>
+                <div>
+                    <p>Телефон</p>
+                    <input type="text" name="userPhone" required placeholder="380661234567" maxlength="12" onclick="deleBorder('userPhone', 'errorReg')">
+                </div>
+            </div>
+            <p id="errorReg" style="margin-bottom: 1vw;text-align: center;color: red;opacity: 0;font-style: italic;font-family: Arial, Helvetica, sans-serif;">Error</p>
+        </div>
+        <button type="submit" id="submitRegUser">Зареєструватися</button>
+        <a onclick="ShowModalAuth()">Вже зареєстровані?</a>
+        <div class="hrSimulator">
+            <div></div>
+            <p>АБО</p>
+            <div></div>
+        </div>
+        <h2>Зареєструватися за допомогою...</h2>
+        <a class="GoogleSignIn">
+            <img src="Images/google.png" alt="">
+            <p>GOOGLE</p>
+        </a>
+    </form>
+    <script>
+
+        /*window.onload = ()=>{
+            let req = new XMLHttpRequest()
+
+            req.onload = () =>{
+                if(JSON.parse(req.response)){
+                    console.log(JSON.parse(req.response))
+                    document.getElementById("logged").style.display = "flex"
+                    document.getElementById("non_logged").style.display = "none"
+                }
+                    
+
+            }
+            req.open("GET", "/logged",true)
+            req.setRequestHeader("Content-Type", "application/json")
+                    
+            req.send()
+        }*/
+
+       // let elemReg = document.getElementById("errorReg")
+       // let elemAuth = document.getElementById("errorAuth")
+
+
+        function deleBorder(name, id) {
+        /*document.forms["rgForm"].elements[name].style.border = 'none'
+        document.getElementById(id).innerHTML = ''
+        elemReg.style.opacity = '0'*/
+        }
+
+
+        document.getElementById("submitAuthUser").addEventListener("click", (e)=>{
+            e.preventDefault()
+
+        isCorrect = true
+        console.log('Hi')
+        /*
+        document.getElementById("errorReg").innerHTML = ''
+        elemAuth.style.opacity = '0'
+
+        let backForm = document.forms["authForm"]
+        let email = backForm.elements["usEmail"]
+        let pass = backForm.elements["usPwd"]
+
+        let response
+
+        if (isCorrect) {
+
+            let data = JSON.stringify({email: email.value, password: pass})
+            let req = new XMLHttpRequest()
+
+            req.onload = ()=>{
+                
+                response = JSON.parse(req.response)
+                if(response.email != null)
+                {
+                    email.style.border = '1px solid red'
+                    pass.style.border = '1px solid red'
+                    elem.innerHTML = "Невірно вказано пароль або email"
+                    elemReg.style.opacity = '1'
+                    isCorrect =false
+                }
+
+                if(isCorrect){
+                    let feedback = JSON.stringify({name: userName.value, email: email.value, passw: pass.value, phone: phone.value,})
+                    let req = new XMLHttpRequest()
+
+                    req.open("POST", "/user/register",true)
+                    req.setRequestHeader("Content-Type", "application/json")
+                    
+                    req.send(feedback)
+                    document.location.reload(true)
+                }
+            }
+
+            req.open("POST", "/user/login/vali",true)
+            req.setRequestHeader("Content-Type", "application/json")
+
+            req.send(data)        
+        }*/
+
+        )}
+
+/*
+        document.getElementById("submitRegUser").addEventListener("click", (e)=>{
+        e.preventDefault()
+        isCorrect = true
+        document.getElementById("errorReg").innerHTML = ''
+        elemReg.style.opacity = '0'
+
+        let backForm = document.forms["rgForm"]
+        let userName = backForm.elements["userName"]
+        let email = backForm.elements["userEmail"]
+        let pass = backForm.elements["userPwd"]
+        let phone = backForm.elements["userPhone"]
+        
+        
+        let fields = [userName, email, pass, phone]
+        for (var i = 0; i < fields.length; i++) {
+            if (fields[i].value.trim() == '') {
+                fields[i].style.border = '1px solid red'
+                elemReg.innerHTML = "Всі поля повинні бути заповнені"
+                elemReg.style.opacity = '1'
+                isCorrect = false 
+            }
+        }
+        
+        if(isCorrect){
+            let regE = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/
+            if(regE.test(email.value) == false){
+                email.style.border = '1px solid red'
+                elemReg.innerHTML = "Невірно введено email."
+                elemReg.style.opacity = '1'
+                isCorrect = false 
+            }
+
+            let regN = /^([0-9]{12})$/
+            if(regN.test(phone.value) == false){
+                phone.style.border = '1px solid red'
+                if(!isCorrect) elemReg.innerHTML += "<br>"
+                elemReg.innerHTML += "Невірно введено телефон. Формат вводу: 380668329056."
+                elemReg.style.opacity = '1'
+                isCorrect = false 
+            }
+
+            if(pass.value.length < 8 || pass.value.length > 32)
+            {
+                pass.style.border = '1px solid red'
+                if(!isCorrect) elemReg.innerHTML += "<br>"
+                elemReg.innerHTML += "Довжина пароля повинна бути від 8 до 32."
+                elemReg.style.opacity = '1'
+                isCorrect = false 
+            }
+
+            if(isCorrect){
+                let regP = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,32}$/
+                if(regP.test(pass.value) == false){
+                    pass.style.border = '1px solid red'
+                    elemReg.innerHTML += "Пароль має містити хоча б 1у велику і маленьку латинську літеру та 1у цифру."
+                    elemReg.style.opacity = '1'
+                    isCorrect = false 
+                }
+            }
+        }
+        
+
+        let response
+
+        if (isCorrect) {
+
+            let data = JSON.stringify({email: email.value})
+            let req = new XMLHttpRequest()
+
+            req.onload = ()=>{
+                
+                response = JSON.parse(req.response)
+                if(response.email != null)
+                {
+                    email.style.border = '1px solid red'
+                    elemReg.innerHTML = "Користувач з такою поштою вже зарєєстрований у системі"
+                    elemReg.style.opacity = '1'
+                    isCorrect =false
+                }
+
+                if(isCorrect){
+                    let feedback = JSON.stringify({name: userName.value, email: email.value, passw: pass.value, phone: phone.value,})
+                    let req = new XMLHttpRequest()
+
+                    req.open("POST", "/user/register",true)
+                    req.setRequestHeader("Content-Type", "application/json")
+                    
+                    req.send(feedback)
+                    document.location.reload(true)
+                }
+            }
+
+            req.open("POST", "/user/register/vali",true)
+            req.setRequestHeader("Content-Type", "application/json")
+
+            req.send(data)        
+        }
+
+
+
+    })*/
+</script>
+</div>

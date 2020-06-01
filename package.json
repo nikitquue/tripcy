@@ -1,11 +1,33 @@
 {
   "name": "tripcy",
   "version": "1.0.0",
-  "description": "",
+  "description": "Kharkiv Tours",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index",
+    "start": "node index.js"
   },
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "kharkiv",
+    "tours",
+    "ukrain",
+    "tourism",
+    "tourist",
+    "tripcy"
+  ],
+  "author": "Jaine Hre yevgeniia.hrebenchuk@nure.ua Daniel Suv daniil.suvorov@nure.ua",
+  "license": "ISC",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^3.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "express-session": "^1.17.1",
+    "hbs": "^4.1.1",
+    "mongoose": "^5.9.14",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.6",
+    "nodemon": "^2.0.4"
+  }
 }

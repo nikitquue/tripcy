@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HOME</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="content">
+            <header>
+                <a href="index.html" class="logo"></a>
+                <div class="headerLinks">
+                    <a href="guides.html">Гіди</a>
+                    <a href="schedule.html">Розклад</a>
+                    <a href="map.html">Мапа</a>
+                </div>
+                <div class="searchBlock">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="headerSearch" placeholder="Наприклад, Собор">
+                </div>
+
+                <div class="authorizationBlock">
+                    <a class="profileLink">
+                        <img src="./Images/profile.png" alt="">
+                        <a href="#" class="active">Мій профіль</a>
+                    </a>
+                    
+                    <p>|</p>
+                    <a href="#">Вийти</a>
+                </div>
+            </header>
+            <main>
+                <div class="profileBlock">                   
+                    <div class="profileTabs">
+                        <a class="activeTab" id="excursionsTab" onclick="ShowExTab()">Екскурсії</a>
+                        <a id="guidesTab" onclick="ShowGuidesTab()">Гіди</a>                            
+                        <a id="scheduleTab" onclick="ShowScheduleTab()">Розклад</a>                                                 
+                        <a id="sightsTab" onclick="ShowSightsTab()">Пам'ятки</a>  
+                    </div>
+                    <div class="profileInfoBlock">
+                      <div class="ExcursionsBlock" id="exBlock">
+                          <div class="excursionList">
+                              <div class="excursionInList">
+                                    <img src="./Images/gosprom.jpg" alt="">
+                                    <div class="excDescInList">
+                                        <h2>Релегійний Харків</h2>
+                                        <div class="sightsOfEx">
+                                            <h4>Покровський собор</h4>
+                                            <h4>Храм Святих<br> Жінок-Мироносиць</h4>
+                                            <h4>Собор Успіння<br> Пресвятої Діви Марії</h4>
+                                        </div>        
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Aenean euismod bibendum laoreet. Proin gravida dolor sit amet
+                                            lacus accumsan et viverra justo commodo. Proin sodales pulvinar
+                                            sic tempor. Sociis natoque penatibus et magnis dis parturient
+                                            montes, nascetur ridiculus mus.</p>             
+                                    </div> 
+                                    <div class="actionsWithExc">
+                                        <i class="fas fa-pen" onclick="ShowModalEditExc()"></i>
+                                        <i class="far fa-trash-alt"></i>
+                                    </div>
+                              </div>
+                              <div class="excursionInList">
+                                <img src="./Images/gosprom.jpg" alt="">
+                                <div class="excDescInList">
+                                    <h2>Релегійний Харків</h2>
+                                    <div class="sightsOfEx">
+                                        <h4>Покровський собор</h4>
+                                        <h4>Храм Святих<br> Жінок-Мироносиць</h4>
+                                        <h4>Собор Успіння<br> Пресвятої Діви Марії</h4>
+                                    </div>        
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Aenean euismod bibendum laoreet. Proin gravida dolor sit amet
+                                        lacus accumsan et viverra justo commodo. Proin sodales pulvinar
+                                        sic tempor. Sociis natoque penatibus et magnis dis parturient
+                                        montes, nascetur ridiculus mus.</p>             
+                                </div> 
+                                <div class="actionsWithExc">
+                                    <i class="fas fa-pen" onclick="ShowModalEditExc()"></i>
+                                    <i class="far fa-trash-alt"></i>
+                                </div>
+                          </div>                          
+                          </div>
+
+                          <button style="align-self: center; margin-top: 3vw; outline: none;" onclick="ShowModalAddExc()">Додати екскурсію</button>
+                      </div>       
+                      <div class="guidesBlock" id="guidesBlock">
+                        <div class="excursionList">
+                              <div class="excursionInList">
+                                    <img src="./Images/guide.png" alt="">
+                                    <div class="excDescInList">
+                                        <h2>Манулов Манул</h2>  
+                                        <p style="color:#fff">Телефон : 068337628</p>                                             
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Aenean euismod bibendum laoreet. Proin gravida dolor sit amet
+                                            lacus accumsan et viverra justo commodo. Proin sodales pulvinar
+                                            sic tempor. Sociis natoque penatibus et magnis dis parturient
+                                            montes, nascetur ridiculus mus.</p>             
+                                    </div> 
+                                    <div class="actionsWithExc">
+                                        <i class="fas fa-pen" onclick="ShowModalEditGuide()"></i>
+                                        <i class="far fa-trash-alt"></i>
+                                    </div>
+                              </div>
+                              <div class="excursionInList">
+                                    <img src="./Images/guide.png" alt="">
+                                    <div class="excDescInList">
+                                        <h2>Манулов Манул</h2>  
+                                        <p style="color:#fff">Телефон : 068337628</p>                                             
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Aenean euismod bibendum laoreet. Proin gravida dolor sit amet
+                                            lacus accumsan et viverra justo commodo. Proin sodales pulvinar
+                                            sic tempor. Sociis natoque penatibus et magnis dis parturient
+                                            montes, nascetur ridiculus mus.</p>             
+                                    </div> 
+                                    <div class="actionsWithExc">
+                                        <i class="fas fa-pen" onclick="ShowModalEditGuide()"></i>
+                                        <i class="far fa-trash-alt"></i>
+                                    </div>
+                              </div>      
+                              <button style="align-self: center; margin-top: 3vw; outline: none;" onclick="ShowModalAddGuide()">Додати гіда</button>                                            
+                          </div>                                
+                    </div> 
+                    <div class="schedBlock" id="schedBlock">
+                        <div class="excursionList">
+                            <div class="excursionInList">
+                                  <img src="./Images/gosprom.jpg" alt="">
+                                  <div class="excDescInList">
+                                      <h2>Релегійний Харків</h2>
+                                      <div class="sightsOfEx">
+                                          <h4>Покровський собор</h4>
+                                          <h4>Храм Святих<br> Жінок-Мироносиць</h4>
+                                          <h4>Собор Успіння<br> Пресвятої Діви Марії</h4>
+                                      </div>  
+                                      <p style="color:#fff">Де: вул Наукова, 12</p>      
+                                      <p style="color:#fff">Коли: 20.05.2020 у 13:00</p>      
+                                      <p style="color:#fff">Гід: Манулов М.В.</p>
+                                      <p style="color:#fff">Вид: Індивідуальна (1-5 людей)</p>
+                                      <p style="color:#fff">Ціна: 400 грн за особу</p>
+                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                          Aenean euismod bibendum laoreet. Proin gravida dolor sit amet
+                                          lacus accumsan et viverra justo commodo. Proin sodales pulvinar
+                                          sic tempor. Sociis natoque penatibus et magnis dis parturient
+                                          montes, nascetur ridiculus mus.</p>             
+                                  </div> 
+                                  <div class="actionsWithExc">
+                                      <i class="fas fa-pen" onclick="ShowModalEditSched()"></i>
+                                      <i class="far fa-trash-alt"></i>
+                                  </div>
+                            </div>
+                            <div class="excursionInList">
+                              <img src="./Images/gosprom.jpg" alt="">
+                              <div class="excDescInList">
+                                  <h2>Релегійний Харків</h2>
+                                  <div class="sightsOfEx">
+                                      <h4>Покровський собор</h4>
+                                      <h4>Храм Святих<br> Жінок-Мироносиць</h4>
+                                      <h4>Собор Успіння<br> Пресвятої Діви Марії</h4>
+                                  </div>      
+                                  <p>Де: вул Наукова, 12</p>      
+                                      <p style="color:#fff">Коли: 20.05.2020 у 13:00</p>      
+                                      <p style="color:#fff">Гід: Манулов М.В.</p>
+                                      <p style="color:#fff">Вид: Індивідуальна (1-5 людей)</p>
+                                      <p style="color:#fff">Ціна: 400 грн за особу</p>  
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                      Aenean euismod bibendum laoreet. Proin gravida dolor sit amet
+                                      lacus accumsan et viverra justo commodo. Proin sodales pulvinar
+                                      sic tempor. Sociis natoque penatibus et magnis dis parturient
+                                      montes, nascetur ridiculus mus.</p>             
+                              </div> 
+                              <div class="actionsWithExc">
+                                  <i class="fas fa-pen" onclick="ShowModalEditSched()"></i>
+                                  <i class="far fa-trash-alt"></i>
+                              </div>
+                              
+                        </div>
+                        <button style="align-self: center; margin-top: 3vw; outline: none;" onclick="ShowModalAddSched()">Додати екскурсію</button>
+                        </div>
+                    </div> 
+                    <div class="siBlock" id="siBlock">
+                        <div class="excursionList">
+                            <div class="excursionInList">
+                                  <img src="./Images/gosprom.jpg" alt="">
+                                  <div class="excDescInList">
+                                      <h2>Покровський собор</h2>
+                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                          Aenean euismod bibendum laoreet. Proin gravida dolor sit amet
+                                          lacus accumsan et viverra justo commodo. Proin sodales pulvinar
+                                          sic tempor. Sociis natoque penatibus et magnis dis parturient
+                                          montes, nascetur ridiculus mus.</p>             
+                                  </div> 
+                                  <div class="actionsWithExc">
+                                      <i class="fas fa-pen" onclick="ShowModalEditSight()"></i>
+                                      <i class="far fa-trash-alt"></i>
+                                  </div>
+                            </div>
+                            <div class="excursionInList">
+                                <img src="./Images/gosprom.jpg" alt="">
+                                <div class="excDescInList">
+                                    <h2>Покровський собор</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Aenean euismod bibendum laoreet. Proin gravida dolor sit amet
+                                        lacus accumsan et viverra justo commodo. Proin sodales pulvinar
+                                        sic tempor. Sociis natoque penatibus et magnis dis parturient
+                                        montes, nascetur ridiculus mus.</p>             
+                                </div> 
+                                <div class="actionsWithExc">
+                                    <i class="fas fa-pen" onclick="ShowModalEditSight()"></i>
+                                    <i class="far fa-trash-alt"></i>
+                                </div>
+                          </div>                              
+                        </div>
+                        <button style="align-self: center; margin-top: 3vw; outline: none;" onclick="ShowModalAddSight()">Додати Пам'ятку</button>
+                        </div>     
+                    </div>                                     
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer>
+            <a href="tel:+380673939649" class="footerEl">
+                <i class="fas fa-mobile-alt"></i>
+                <p>+38 067 39 39 649</p>
+            </a>
+            <a href="" class="footerEl">
+                <i class="far fa-envelope"></i>
+                <p>tripcy@tour.com</p>
+            </a>
+            <a href="" class="footerEl">
+                <i class="fab fa-instagram"></i>
+                <p>@tripcy_tours</p>
+            </a>
+            <a href="" class="footerEl">
+                <i class="fab fa-google-play"></i>
+                <p>Our mobile app</p>
+            </a>
+
+        </footer>
+    </div>        
+    <div class=" modal modalEditExc" id="modalEditExc">
+        <form action="" method="POST">
+            <h1>Редагувати екскурсію</h1>
+            <div>
+                <p>Назва</p>
+                <input type="text" required placeholder="Назва екскурсії">
+            </div>
+            <div>
+                <p>Фото 360</p>
+                <input type="text" required placeholder="Вставте посилання на фото">
+            </div>
+            <p>Опис</p>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Опис"></textarea>
+            <div>
+                <p>Місце зустрічі</p>
+                <input type="text" required placeholder="вул. Наукова 12">
+            </div>
+            
+            <div>
+                <p>Пам'ятка 1</p>
+                <select name="SightsSelectList" id="">
+                    <option value="Якась пам'ятка">Якась пам'ятка</option>
+                    <option value="Якась пам'ятка">Якась пам'ятка</option>
+                    <option value="Якась пам'ятка">Якась пам'ятка</option>
+                    <option value="Якась пам'ятка">Якась пам'ятка</option>
+                </select>
+                <p>Пам'ятка 2</p>
+                <select name="SightsSelectList" id="">
+                    <option value="Якась пам'ятка">Якась пам'ятка</option>
+                    <option value="Якась пам'ятка">Якась пам'ятка</option>
+                    <option value="Якась пам'ятка">Якась пам'ятка</option>
+                    <option value="Якась пам'ятка">Якась пам'ятка</option>
+                </select>
+            </div>
+            <div>
+                <p>Тривалість</p>
+                <input type="text" required placeholder="1.5 години">
+            </div>
+            <div>
+                <p>Відстань</p>
+                <input type="text" required placeholder="5 км">
+            </div>
+            <button>Зберегти зміни</button>
+        </form>
+    </div>
+    <div class="modal modalEditExc" id="modalAddExc">
+        <form action="" method="POST">
+            <h1>Додати екскурсію</h1>
+            <div>
+                <p>Назва</p>
+                <input type="text" required placeholder="Назва екскурсії">
+            </div>
+            <div>
+                <p>Фото 360</p>
+                <input type="text" required placeholder="Вставте посилання на фото">
+            </div>            
+                <p>Опис</p>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Опис"></textarea>            
+            
+            <div>
+                <p>Місце зустрічі</p>
+                <input type="text" required placeholder="вул. Наукова 12">
+            </div>
+            <div>
+                <p>Пам'ятка 1</p>
+                <select name="SightsSelectList" id="">
+                    <option value="Якась пам'ятка">Якась пам'ятка</option>
+                    <option value="Якась пам'ятка">Якась пам'ятка</option>
+                    <option value="Якась пам'ятка">Якась пам'ятка</option>
+                    <option value="Якась пам'ятка">Якась пам'ятка</option>
+                </select>
+                <p>Пам'ятка 2</p>
+                <select name="SightsSelectList" id="">
+                    <option value="Якась пам'ятка">Якась пам'ятка</option>
+                    <option value="Якась пам'ятка">Якась пам'ятка</option>
+                    <option value="Якась пам'ятка">Якась пам'ятка</option>
+                    <option value="Якась пам'ятка">Якась пам'ятка</option>
+                </select>
+            </div>
+            <div>
+                <p>Тривалість</p>
+                <input type="text" required placeholder="1.5 години">
+            </div>
+            <div>
+                <p>Відстань</p>
+                <input type="text" required placeholder="5 км">
+            </div>
+            <button>Зберегти зміни</button>
+        </form>
+    </div>
+
+    <div class=" modal modalEditExc" id="modalEditGuide">
+        <form action="" method="POST">
+            <h1>Редагувати Гіда</h1>
+            <div>
+                <p>Ім'я</p>
+                <input type="text" required placeholder="Манул">
+            </div>
+            <div>
+                <p>Прізвише</p>
+                <input type="text" required placeholder="Манулов">
+            </div>
+            <p>Опис</p>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Опис"></textarea>
+            <div>
+                <p>Фото</p>
+                <input type="file" required placeholder="">
+            </div>                       
+            <div>
+                <p>Телефон</p>
+                <input type="tel" required placeholder="0673939639">
+            </div>
+            <button>Зберегти зміни</button>
+        </form>
+    </div>
+    <div class=" modal modalEditExc" id="modalAddGuide">
+        <form action="" method="POST">
+            <h1>Зареєструвати Гіда</h1>
+            <div>
+                <p>Ім'я</p>
+                <input type="text" required placeholder="Манул">
+            </div>
+            <div>
+                <p>Прізвише</p>
+                <input type="text" required placeholder="Манулов">
+            </div>
+            <p>Опис</p>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Опис"></textarea>
+            <div>
+                <p>Фото</p>
+                <input type="file" required placeholder="">
+            </div>                       
+            <div>
+                <p>Телефон</p>
+                <input type="tel" required placeholder="0673939639">
+            </div>
+            <button>Зареэструвати</button>
+        </form>
+    </div>
+    <div class=" modal modalEditExc" id="modalAddSched">
+        <form action="" method="POST">
+            <h1>Додати екскурсію</h1>
+            <div>                
+                <p>Екскурсія:</p>
+                <select name="SightsSelectList" id="">
+                    <option value="Якась Екскурсія">Якась Екскурсія</option>
+                    <option value="Якась Екскурсія">Якась Екскурсія</option>
+                    <option value="Якась Екскурсія">Якась Екскурсія</option>
+                    <option value="Якась Екскурсія">Якась Екскурсія</option>
+                </select>
+            </div>
+            <div>
+                <p>Дата</p>
+                <input type="text" required placeholder="Дата">
+            </div>
+            <div>
+            <p>Вид</p>
+            <select name="SightsSelectList" id="">
+                <option value="Якась Екскурсія">Індивідуальна</option>
+                <option value="Якась Екскурсія">Маленька</option>
+                <option value="Якась Екскурсія">Велика</option>                                
+            </select>
+            </div>
+            <div>
+                <p>Час</p>
+                <input type="text" required placeholder="Час">
+            </div>                       
+            <div>
+                <p>Ціна</p>
+                <input type="text" required placeholder="400 грн">
+            </div>
+            <button>Додати</button>
+        </form>
+    </div>
+    <div class=" modal modalEditExc" id="modalEditSched">
+        <form action="" method="POST">
+            <h1>Редагувати екскурсію</h1>
+            <div>                
+                <p>Екскурсія:</p>
+                <select name="SightsSelectList" id="">
+                    <option value="Якась Екскурсія">Якась Екскурсія</option>
+                    <option value="Якась Екскурсія">Якась Екскурсія</option>
+                    <option value="Якась Екскурсія">Якась Екскурсія</option>
+                    <option value="Якась Екскурсія">Якась Екскурсія</option>
+                </select>
+            </div>
+            <div>
+                <p>Дата</p>
+                <input type="text" required placeholder="Дата">
+            </div>
+            <div>
+            <p>Вид</p>
+            <select name="SightsSelectList" id="">
+                <option value="Якась Екскурсія">Індивідуальна</option>
+                <option value="Якась Екскурсія">Маленька</option>
+                <option value="Якась Екскурсія">Велика</option>                                
+            </select>
+        </div>
+                <div>
+                <p>Час</p>
+                <input type="text" required placeholder="Час">
+            </div>                       
+            <div>
+                <p>Ціна</p>
+                <input type="text" required placeholder="400 грн">
+            </div>
+            <button>Зберегти зміни</button>
+        </form>
+    </div>
+    <div class=" modal modalEditExc" id="modalEditSight">
+        <form action="" method="POST">
+            <h1>Редагувати пам'ятку</h1>
+            <div>                
+                <p>Назва пам'ятки:</p>
+                <input type="text" placeholder="Покровський собор">
+            </div>
+            <div>
+                <p>Фото 1</p>
+                <input type="file" required placeholder="">
+            </div>
+            <div>
+                <p>Фото 2</p>
+                <input type="file" required placeholder="">
+            </div>
+            <div>
+                <p>Фото 3</p>
+                <input type="file" required placeholder="">
+            </div>
+            <p>Опис</p>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Опис"></textarea>
+            <button>Зберегти зміни</button>
+        </form>
+    </div>
+    <div class=" modal modalEditExc" id="modalAddSight">
+        <form action="" method="POST">
+            <h1>Додати пам'ятку</h1>
+            <div>                
+                <p>Назва пам'ятки:</p>
+                <input type="text" placeholder="Покровський собор">
+            </div>
+            <div>
+                <p>Фото 1</p>
+                <input type="file" required placeholder="">
+            </div>
+            <div>
+                <p>Фото 2</p>
+                <input type="file" required placeholder="">
+            </div>
+            <div>
+                <p>Фото 3</p>
+                <input type="file" required placeholder="">
+            </div>
+            <p>Опис</p>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Опис"></textarea>
+            <button>Додати</button>
+        </form>
+    </div>
+    <script src="./JS/script.js" async defer></script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<header>
+    <a href="/" class="logo"></a>
+    <div class="headerLinks">
+        <a href="/guides" class="{{activeG}}">Гіди</a>
+        <a href="/schedule" class="{{activeS}}">Розклад</a>
+        <a href="/map" class="{{activeM}}">Мапа</a>
+    </div>
+    <div class="searchBlock">
+        <i class="fas fa-search"></i>
+        <input type="text" class="headerSearch" placeholder="Наприклад, Собор">
+    </div>
+
+    <div class="authorizationBlock non_logged" id="non_logged">
+        <a onclick="ShowModalAuth()">Увійти</a>
+        <p>|</p>
+        <a onclick="ShowModalReg()">Зареєструватися</a>
+    </div>
+    {{> logoutBlock}}
+</header>

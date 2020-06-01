@@ -13,10 +13,6 @@ var modalEditSched = document.querySelector('#modalEditSched');
 var modalEditSight = document.querySelector('#modalEditSight');
 var modalAddSight = document.querySelector('#modalAddSight');
 var modalMarkers =document.querySelector('.modalMarkers');
-var markersArr = [
-        
-    
-]
 
 function ShowModalMarker(){    
     modalMarkers.style.display="flex";
@@ -113,6 +109,10 @@ window.onclick = function(event) {
       }
     
 }
+
+
+
+
   //Массивы содержат все картинки из папки, religiousKhImgs - экскурсия, sight1..2..n - достропримечательность (просьба соблюдать архитектуру!)
   var list1 =[
     "./religiousKhImgs/sight1/1.jpg",
@@ -176,7 +176,7 @@ var ourEl3= document.querySelector("#imgSight3");
       SlideShow2();
       SlideShow3();
   }
-  window.onload = SlideShows;
+  //window.onload = SlideShows;
 
 function ShowCardInfo(){
     let addBlock = document.querySelector('.addCard');

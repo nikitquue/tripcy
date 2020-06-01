@@ -235,6 +235,10 @@ h2 {
   font-size: 1.5vw;
 }
 
+.content header .logged {
+  display: none;
+}
+
 .content main {
   margin-top: 8vw;
 }
@@ -416,12 +420,12 @@ h2 {
 }
 
 .content main .excursionsMain .firstExLine .exPreview:nth-child(1) {
-  background: url(../Images/chirch.jpg);
+  background: url(../Images/tours/chirch.jpg);
   background-size: cover;
 }
 
 .content main .excursionsMain .firstExLine .exPreview:nth-child(2) {
-  background: url(../Images/gosprom.jpg);
+  background: url(../Images/tours/gosprom.jpg);
   background-size: cover;
 }
 
@@ -456,17 +460,17 @@ h2 {
 }
 
 .content main .excursionsMain .secondExLine .exPreview:nth-child(1) {
-  background: url(../Images/castle.jpg);
+  background: url(../Images/tours/castle.jpg);
   background-size: cover;
 }
 
 .content main .excursionsMain .secondExLine .exPreview:nth-child(2) {
-  background: url(../Images/mental_hosp.jpg);
+  background: url(../Images/tours/mental_hosp.jpg);
   background-size: cover;
 }
 
 .content main .excursionsMain .secondExLine .exPreview:nth-child(3) {
-  background: url(../Images/karasin.jpg);
+  background: url(../Images/tours/karasin.jpg);
   background-size: cover;
 }
 
@@ -746,8 +750,7 @@ h2 {
 }
 
 .guidesPageBlock .guideBox img {
-  width: 15vw;
-  height: 15vw;
+  width: 20vw;
 }
 
 .guidesPageBlock .guideBox .guideContent {
@@ -2473,7 +2476,6 @@ footer .footerEl p {
 
 .excursionInList img {
   width: 20vw;
-  height: 15vw;
   margin-right: 3vw;
   -o-object-fit: cover;
      object-fit: cover;
@@ -2627,7 +2629,7 @@ footer .footerEl p {
 }
 
 .modalEditExc form select {
-  width: 15vw;
+  width: 18vw;
   padding: 0.5vw;
   padding-left: 1vw;
   padding-right: 1vw;
@@ -2721,6 +2723,9 @@ footer .footerEl p {
   }
   .content header .authorizationBlock a {
     font-size: 2vw;
+  }
+  .content header .logged {
+    display: none;
   }
   footer {
     height: 10vw;

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HOME</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <div class="modalMarkers">
+        <div id="religiousKhMarker" class="marker">
+            <div class="markerWrap">
+                <img src="./Images/schedule_tour.png" alt="">
+                <div class="markerDesc">
+                    <h2>Чудова назва<br> 
+                    чудової екскурсії</h2>
+                    <div>
+                        <p>Харківська опера</p>
+                        <p>Садиба диба</p>
+                    </div>
+                    <div>
+                        <p>Дзеркальний струмінь</p>
+                        <p>Університет ім. Каразіна</p>
+                    </div>
+                </div>
+            </div>
+            <div class="markerActions">
+                <a href="schedule.html">Записатися</a>            
+                <a href="religiousKh.html">Детальніше</a> 
+            </div>
+        </div>
+            <!-- <div id="secondMarker" class="marker">
+                <div class="markerWrap">
+                    <img src="./Images/schedule_tour.png" alt="">
+                    <div class="markerDesc">
+                        <h2>Чудова назва<br> 
+                        чудової екскурсії</h2>
+                        <div>
+                            <p>Харківська опера</p>
+                            <p>Садиба диба</p>
+                        </div>
+                        <div>
+                            <p>Дзеркальний струмінь</p>
+                            <p>Університет ім. Каразіна</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markerActions">
+                    <a href="schedule.html">Записатися</a>            
+                    <a href="religiousKh.html">Детальніше</a> 
+                </div>
+            </div>
+            <div id="thirdMarker" class="marker">
+                <div class="markerWrap">
+                    <img src="./Images/schedule_tour.png" alt="">
+                    <div class="markerDesc">
+                        <h2>Чудова назва<br> 
+                        чудової екскурсії</h2>
+                        <div>
+                            <p>Харківська опера</p>
+                            <p>Садиба диба</p>
+                        </div>
+                        <div>
+                            <p>Дзеркальний струмінь</p>
+                            <p>Університет ім. Каразіна</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markerActions">
+                    <a href="schedule.html">Записатися</a>            
+                    <a href="religiousKh.html">Детальніше</a> 
+                </div>
+            </div>
+            <div id="fourthMarker" class="marker">
+                <div class="markerWrap">
+                    <img src="./Images/schedule_tour.png" alt="">
+                    <div class="markerDesc">
+                        <h2>Чудова назва<br> 
+                        чудової екскурсії</h2>
+                        <div>
+                            <p>Харківська опера</p>
+                            <p>Садиба диба</p>
+                        </div>
+                        <div>
+                            <p>Дзеркальний струмінь</p>
+                            <p>Університет ім. Каразіна</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markerActions">
+                    <a href="schedule.html">Записатися</a>            
+                    <a href="religiousKh.html">Детальніше</a> 
+                </div>
+            </div>
+            <div id="fifthMarker" class="marker">
+                <div class="markerWrap">
+                    <img src="./Images/schedule_tour.png" alt="">
+                    <div class="markerDesc">
+                        <h2>Чудова назва<br> 
+                        чудової екскурсії</h2>
+                        <div>
+                            <p>Харківська опера</p>
+                            <p>Садиба диба</p>
+                        </div>
+                        <div>
+                            <p>Дзеркальний струмінь</p>
+                            <p>Університет ім. Каразіна</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markerActions">
+                    <a href="schedule.html">Записатися</a>            
+                    <a href="religiousKh.html">Детальніше</a> 
+                </div>
+            </div> -->
+        </div>
+    <div class="wrapper">
+    
+    <div class = "content">
+     <header>
+        <a href="index.html" class="logo"></a>
+        <div class="headerLinks">
+            <a href="guides.html">Гіди</a>
+            <a href="schedule.html">Розклад</a>
+            <a href="map.html" class="active">Мапа</a>
+        </div>
+        <div class="searchBlock">
+            <i class="fas fa-search"></i>
+            <input type="text" class="headerSearch" placeholder="Наприклад, Собор">
+        </div>
+        <div class="authorizationBlock">
+            <a onclick="ShowModalAuth()">Увійти</a>
+            <p>|</p>
+            <a onclick="ShowModalReg()">Зареєструватися</a>
+        </div>
+    </header>
+    <main>
+        <div class="interactiveMap">
+            <h2> Інтерактивна мапа</h2>
+            <p>Натискай на маркер та дивись детальний маршрут про екскурсію</p>
+            <div class="mapBlock">
+                <img src="./Images/map.jpg">
+                <i class="fas fa-map-marker-alt" value="regKha" id="regKha" onclick="ShowModalMarker()"></i> 
+                <i class="fas fa-map-marker-alt" value="withoutKha" id="withoutKha" onclick="ShowModalMarker()"></i>
+                <i class="fas fa-map-marker-alt" value="historyKha" id="historyKha" onclick="ShowModalMarker()"></i>
+                <i class="fas fa-map-marker-alt" value="crazyHouse" id="crazyHouse" onclick="ShowModalMarker()"></i> 
+                <i class="fas fa-map-marker-alt" value="univerKha" id="univerKha" onclick="ShowModalMarker()"></i>
+            </div>
+        </div>
+    </main>
+</div>  
+    <footer>
+        <a href="tel:+380673939649" class="footerEl">
+         <i class="fas fa-mobile-alt"></i>
+            <p>+38 067 39 39 649</p>
+        </a>
+        <a href="" class="footerEl">
+            <i class="far fa-envelope"></i>
+               <p>tripcy@tour.com</p>
+           </a>
+           <a href="" class="footerEl">
+            <i class="fab fa-instagram"></i>
+               <p>@tripcy_tours</p>
+           </a>
+           <a href="" class="footerEl">
+            <i class="fab fa-google-play"></i>
+               <p>Our mobile app</p>
+           </a>
+           
+    </footer>
+</div>
+<div class="modalAuth">
+    <form action="" class="authorizationForm" method="POST">
+        <h1>Вхід</h1>
+        <p>Електрона пошта</p>
+        <input type="email" name="checkMail" required placeholder="ivan.ivanov@gmail.com">
+        <p>Пароль</p>
+        <input type="password" name="checkPwd" required placeholder="ivanov123ivan">
+        <button type="submit">Увійти</button>
+        <a onclick="ShowModalReg()">Вперше на сайті?</a>
+        <div class="hrSimulator">
+            <div></div>
+            <p>АБО</p>
+            <div></div>
+        </div>
+        <h2>Увійти за допомогою...</h2>
+        <a class="GoogleSignIn">
+            <img src="Images/google.png" alt="">
+            <p>GOOGLE</p>
+        </a>
+    </form>
+    <form action="" class="registrForm" method="POST">
+        <h1>Реєстрація</h1>
+        <div class="registerBox">
+            <div class="registerLine">
+                <div>
+                    <p>Ім'я</p>
+                    <input type="text" name="userName" required placeholder="Іванов Іван">
+                </div>
+                <div>
+                    <p>Електрона пошта</p>
+                    <input type="text" name="userEmail" required placeholder="ivanov@gmail.com">
+                </div>
+            </div>
+            <div class="registerLine">
+                <div>
+                    <p>Пароль</p>
+                    <input type="text" name="userPwd" required placeholder="Пароль">
+                </div>
+                <div>
+                    <p>Телефон</p>
+                    <input type="text" name="userPhone" required placeholder="0661234567">
+                </div>
+            </div>
+        </div>
+        <button type="submit">Зареєструватися</button>
+        <a onclick="ShowModalAuth()">Вже зареєстровані?</a>
+        <div class="hrSimulator">
+            <div></div>
+            <p>АБО</p>
+            <div></div>
+        </div>
+        <h2>Зареєструватися за допомогою...</h2>
+        <a class="GoogleSignIn">
+            <img src="Images/google.png" alt="">
+            <p>GOOGLE</p>
+        </a>
+    </form>
+</div>
+
+<script src="./JS/script.js" async defer></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<main>
+    <div class="guidesPageBlock">
+        <h2>Наші гіди</h2>
+
+        {{#each guides}}
+            
+            <div class="guideBox">
+                <img src="./Images/guides/{{image}}" alt="" draggable="false">
+                <div class="guideContent">
+                    <h3>{{name}} {{surname}}</h3>
+                    <p>{{description}}</p>
+                    <div class="guideRate">
+                        <h4>Рейтинг</h4>
+                        <div class="starsBlock">
+                            {{#if 1}}
+                            
+                                <input id="g"{{id}}"_star_5" type="radio" name="guide1stars">
+                                <label for="g"{{id}}"_star_5"><i class="far fa-star"></i></label>
+                                <input id="g"{{id}}"_star_4" type="radio" name="guide1stars">
+                                <label for="g"{{id}}"_star_4"><i class="far fa-star"></i></label>
+                                <input id="g"{{id}}"_star_3" type="radio" name="guide1stars">
+                                <label for="g"{{id}}"_star_3"><i class="far fa-star"></i></label>
+                                <input id="g"{{id}}"_star_2" type="radio" name="guide1stars">
+                                <label for="g"{{id}}"_star_2"><i class="far fa-star"></i></label>
+                                <input id="g"{{id}}"_star_1" type="radio" name="guide1stars">
+                                <label for="g"{{id}}"_star_1"><i class="far fa-star"></i></label>
+                            {{/if}}
+                        </div>
+                        {{#if rate}}
+                        <h4>{{rate}}</h4>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+            
+        {{/each}}
+        
+    </div>
+</main>

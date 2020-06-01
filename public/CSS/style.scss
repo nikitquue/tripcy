@@ -178,6 +178,9 @@ h2{
                 font-size: 1.5vw;
             }
         }
+        .logged{
+            display: none;
+        }
     }
 
     main {
@@ -338,12 +341,12 @@ h2{
                     font-size: 2.5vw;
 
                     &:nth-child(1) {
-                        background: url(../Images/chirch.jpg);
+                        background: url(../Images/tours/chirch.jpg);
                         background-size: cover;
                     }
 
                     &:nth-child(2) {
-                        background: url(../Images/gosprom.jpg);
+                        background: url(../Images/tours/gosprom.jpg);
                         background-size: cover;
                     }
                 }
@@ -369,17 +372,17 @@ h2{
                     font-size: 2.5vw;
 
                     &:nth-child(1) {
-                        background: url(../Images/castle.jpg);
+                        background: url(../Images/tours/castle.jpg);
                         background-size: cover;
                     }
 
                     &:nth-child(2) {
-                        background: url(../Images/mental_hosp.jpg);
+                        background: url(../Images/tours/mental_hosp.jpg);
                         background-size: cover;
                     }
 
                     &:nth-child(3) {
-                        background: url(../Images/karasin.jpg);
+                        background: url(../Images/tours/karasin.jpg);
                         background-size: cover;
                     }
                 }
@@ -598,8 +601,7 @@ h2{
          align-items: center;
          margin-bottom: 10vw;
          img{
-             width:15vw;
-             height: 15vw;
+             width:20vw;
          }
          .guideContent{
             width: 45vw;
@@ -1843,7 +1845,6 @@ footer {
     justify-content: space-between;
     img{
         width: 20vw;
-        height: 15vw;
         margin-right: 3vw;
         object-fit: cover;
     }
@@ -1962,7 +1963,7 @@ footer {
             }
         }
         select{
-            width: 15vw;
+            width: 18vw;
             padding: 0.5vw;
             padding-left: 1vw;
             padding-right: 1vw;
@@ -2036,6 +2037,7 @@ footer {
                 
             }
             .authorizationBlock {
+                
                 display: flex;
                 flex-direction: column;
                 p{
@@ -2044,6 +2046,10 @@ footer {
                 a{
                     font-size: 2vw;                    
                 }
+                
+            }
+            .logged{
+                display: none;
             }
         }
     }
